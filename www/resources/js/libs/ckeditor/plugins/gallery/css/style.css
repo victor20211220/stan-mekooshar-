@@ -1,0 +1,153 @@
+.gallery {
+	list-style: none;
+	border: 1px solid #939598;
+	outline-color: #bfbfbf !important;
+	overflow: hidden;
+	padding: 0;
+}
+
+.gallery a {
+	display: block;
+	font-size: 0;
+}
+
+.gallery li {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	margin: 11px;
+	float: left;
+	overflow: hidden;
+	background: url(../images/empty.png);
+}
+
+
+.gallery li:first-child {
+	background: url(../images/border.png);
+	position: static;
+}
+
+
+.gallery li:first-child a {
+	font-size: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../images/plus.png) center no-repeat;
+}
+
+.gallery li:first-child a:hover {
+	opacity: 0.7;
+}
+
+.gallery-image-actions {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	right: 0;
+	padding: 2px;
+	width: 25px;
+}
+
+
+
+.gallery a.remove, .gallery a.edit {
+	display: block;
+	width: 25px;
+	height: 29px;
+	text-align: center;
+	line-height: 25px;
+	cursor: pointer;
+	margin-left: 2px;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	right: -20px;
+	padding: 10px;
+	bottom: 0;
+	opacity: 0;
+}
+
+.gallery a.remove:after, .gallery a.edit:after {
+	content: '';
+	position: absolute;
+	background: url(../images/icon.png) 0 0 no-repeat;
+	width: 24px;
+	height: 29px;
+	top: 11px;
+	left: 10px;
+}
+
+.gallery li:hover a{
+	-webkit-transition: .2s all linear;
+	-moz-transition: .2s all linear;
+	-o-transition: .2s all linear;
+	transition: .2s all linear;
+	right: 0;
+	opacity: 1;
+}
+
+.gallery a.edit {
+	top: 0;
+	bottom: auto;
+}
+
+.gallery a.edit:after {
+	background-position: -53px 0;
+}
+
+.gallery a.edit:hover:after {
+	background-position: -77px 0;
+}
+
+.gallery a.remove:after {
+	top: 6px;
+}
+
+.gallery a.remove:hover:after {
+	background-position: -27px 0;
+}
+
+.gallery span:hover {
+	background: #fff;
+}
+
+.gallery li img {
+	cursor: crosshair;
+}
+
+.gallery .removeGallery {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+	text-align: center;
+	line-height: 20px;
+	font-size: 0;
+	z-index: 5;
+	background: url(../images/delete.png);
+}
+
+.gallery .removeGallery:hover {
+	background: url(../images/delete.png);
+	opacity: 0.7;
+}
+
+
+.loader {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 0;
+	z-index: 5;
+	background: rgba(0, 124, 205, 0.2);
+	transition: 0.3s all linear;
+}
+
+.cke_widget_drag_handler_container {
+	display: none !important;
+	/*top: 0;
+	width: 15px !important;
+	height: 15px !important;
+	position: absolute !important;*/
+}

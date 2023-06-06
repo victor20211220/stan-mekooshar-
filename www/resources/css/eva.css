@@ -1,0 +1,168 @@
+/* EVA
+================================================================================
+==============================================================================*/
+.eva-container {
+	position: fixed;
+	width: 110px;
+	height: 110px;
+	z-index: 10001;
+/*	display: none;*/
+}
+.eva-container .avatar {
+	position: absolute;
+	bottom: 0px;
+	right: 0;
+	width: 110px;
+	height: 90px;
+	background: transparent url(/resources/images/eva/eva-sprite.png) top right no-repeat;
+	cursor: move;
+}
+.eva-container.eva-error .avatar {
+	background-position: bottom right;
+}
+.eva-container.left-side .avatar {
+	background-position: top left;
+}
+.eva-container.eva-error.left-side .avatar {
+	background-position: bottom left;
+}
+
+.page-404 .eva-container .avatar {
+	background-image: url(/resources/images/eva/eva-404.gif);
+}
+.page-404 .eva-container.left-side .avatar {
+	background-image: url(/resources/images/eva/eva-404-left.gif);
+}
+.eva-container.has-message .avatar:before, .eva-container.has-message .avatar:after {
+	content: '';
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.95);
+	border: 1px solid #c5c8cb;
+	z-index: 3;
+        transition: all ease 0.3s; -webkit-transition: all ease 0.3s; -moz-transition: all ease 0.3s; -ms-transition: all ease 0.3s; -o-transition: all ease 0.3s;
+}
+.eva-container.has-message .avatar:before {
+	top: -15px;
+	left: -35px;
+	width: 27px;
+	height: 27px;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+}
+.eva-container.has-message .avatar:after {
+	top: 15px;
+	left: -10px;
+	width: 10px;
+	height: 10px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+}
+.eva-container.has-message.left-side .avatar:before {
+	right: -10px;
+	left: auto;
+	box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.1); -moz-box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.1); -webkit-box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+.eva-container.has-message.left-side .avatar:after {
+	left: auto;
+	right: 20px;
+	box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.1); -moz-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.1); -webkit-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.eva-container .message {
+	position: absolute;
+	display: none;
+	z-index: 101;
+	min-width: 280px;
+	width: 280px;
+        bottom: 110px;
+	right: 0;
+	overflow: visible;
+        box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
+	transition: all ease 0.3s; -webkit-transition: all ease 0.3s; -moz-transition: all ease 0.3s; -ms-transition: all ease 0.3s; -o-transition: all ease 0.3s;
+}
+.eva-container .message:before {
+	position: absolute;
+	content: '';
+	left: 10px;
+	right: 10px;
+	height: 8px;
+	top: 100%;
+	z-index: 2;
+	opacity: 0.5;
+	background: transparent url(/resources/images/eva/eva-content-shadow.png) top center no-repeat;
+}
+.eva-container.has-message .message {
+	display: block;
+}
+.eva-container.left-side .message {
+	right: auto;
+	left: 0;
+}
+
+.eva-container .tooltip-content {
+	border-color: #888;
+}
+
+.eva-container .message-content, .eva-container .tooltip-content {
+	position: relative;
+	min-height: 100%;
+	z-index: 2;
+	line-height: 16px;
+	font-size: 12px;
+	text-align: center;
+	padding: 12px 8px;
+	border: 1px solid #c5c8cb;
+	background-color: white;
+	box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
+	border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+.eva-container .tooltip-content {
+	display: none;
+}
+
+.eva-container .message-content .title, .eva-container .tooltip-content .title {
+	margin-bottom: 2px;
+	color: #004c87;
+	text-shadow: 0 0px 1px rgba(0, 76, 135, 0.1);
+}
+.eva-container .message-content .text, .eva-container .tooltip-content .text {
+	color: #606060;
+	text-shadow: 0 1px 0px rgba(0, 0, 0, 0.05);
+}
+
+
+
+.eva-overlay {
+	position: fixed;
+	z-index: 99;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	display: block;
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+.confirm-block {
+	overflow: hidden;
+	padding: 30px 0 20px;
+	text-align: center;
+	line-height: 38px;
+}
+.confirm-block a {
+	position: relative;
+	overflow: visible;
+	text-indent: 46px;
+	margin: 0 15px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.confirm-block a.ok {
+	float: left;
+}
+.confirm-block a.cancel {
+	float: right;
+	text-indent: -98px;
+}

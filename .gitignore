@@ -1,0 +1,13 @@
+.DS_Store
+.idea
+.sass-cache
+application/_log
+application/config_loc.php
+www/content
+www/assets
+nbproject
+node_modules
+application/tmp/config_loc.php
+application/config.php
+vendor
+www/PayPal.log

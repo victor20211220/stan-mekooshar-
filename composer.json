@@ -1,0 +1,9 @@
+{
+    "require": {
+        "facebook/graph-sdk" : "~5.0",
+        "facebook/php-ads-sdk": "2.8.*",
+        "paypal/rest-api-sdk-php": "*",
+        "gumlet/php-image-resize": "1.9.*",
+        "google/apiclient": "^2.0"
+    }
+}

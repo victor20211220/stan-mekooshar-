@@ -1,0 +1,157 @@
+/* For CKEDIT
+==============================================================================*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/serhii\/www\/mekooshar\/www\/resources\/css\/sass\/pages\.scss}line{font-family:\000036}}
+.ckeditor {
+  width: 100%;
+  height: 400px;
+  overflow: auto;
+  background: #fff;
+  border: 1px solid #cacaca;
+  padding: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/serhii\/www\/mekooshar\/www\/resources\/css\/sass\/pages\.scss}line{font-family:\0000316}}
+  .ckeditor table caption,
+  .ckeditor table tbody,
+  .ckeditor table thead,
+  .ckeditor table tfoot,
+  .ckeditor table td,
+  .ckeditor table th,
+  .ckeditor table tr {
+    border: 1px solid gray !important;
+    margin: auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/serhii\/www\/mekooshar\/www\/resources\/css\/sass\/pages\.scss}line{font-family:\0000331}}
+#page > fieldset > ol > li {
+  border-top: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/serhii\/www\/mekooshar\/www\/resources\/css\/sass\/pages\.scss}line{font-family:\0000334}}
+#page input[type=text] {
+  display: inline-block;
+  width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/serhii\/www\/mekooshar\/www\/resources\/css\/sass\/pages\.scss}line{font-family:\0000338}}
+#page .autoform-element-inner {
+  width: 100%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/serhii\/www\/mekooshar\/www\/resources\/css\/sass\/pages\.scss}line{font-family:\0000344}}
+.form-pages .autoform-label {
+  float: left;
+  line-height: 30px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/serhii\/www\/mekooshar\/www\/resources\/css\/sass\/pages\.scss}line{font-family:\0000348}}
+.form-pages ol li {
+  display: block;
+  padding: .5em 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/serhii\/www\/mekooshar\/www\/resources\/css\/sass\/pages\.scss}line{font-family:\0000352}}
+.form-pages .autoform-element-inner {
+  width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/serhii\/www\/mekooshar\/www\/resources\/css\/sass\/pages\.scss}line{font-family:\0000355}}
+.form-pages input[type="text"] {
+  width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/serhii\/www\/mekooshar\/www\/resources\/css\/sass\/pages\.scss}line{font-family:\0000358}}
+.form-pages textarea {
+  width: 100%;
+  resize: vertical; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/serhii\/www\/mekooshar\/www\/resources\/css\/sass\/pages\.scss}line{font-family:\0000367}}
+.admin_uploader {
+  position: relative; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/serhii\/www\/mekooshar\/www\/resources\/css\/sass\/pages\.scss}line{font-family:\0000370}}
+  .admin_uploader .uploaded-photo {
+    max-height: 90px;
+    max-width: 585px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/serhii\/www\/mekooshar\/www\/resources\/css\/sass\/pages\.scss}line{font-family:\0000374}}
+  .admin_uploader .file-uploader .qq-upload-button {
+    height: 94px;
+    width: 94px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/serhii\/www\/mekooshar\/www\/resources\/css\/sass\/pages\.scss}line{font-family:\0000378}}
+    .admin_uploader .file-uploader .qq-upload-button:before {
+      content: 'upload';
+      width: 94px;
+      height: 94px;
+      line-height: 94px;
+      text-indent: 0px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/serhii\/www\/mekooshar\/www\/resources\/css\/sass\/pages\.scss}line{font-family:\0000385}}
+    .admin_uploader .file-uploader .qq-upload-button:after {
+      display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/serhii\/www\/mekooshar\/www\/resources\/css\/sass\/pages\.scss}line{font-family:\0000390}}
+.file-uploader {
+  position: absolute;
+  display: block !important;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/serhii\/www\/mekooshar\/www\/resources\/css\/sass\/pages\.scss}line{font-family:\0000398}}
+  .file-uploader input[type="file"] {
+    height: 100%;
+    font-size: auto;
+    display: block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/serhii\/www\/mekooshar\/www\/resources\/css\/sass\/pages\.scss}line{font-family:\00003104}}
+  .file-uploader .qq-upload-status,
+  .file-uploader .qq-upload-list {
+    display: none !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/serhii\/www\/mekooshar\/www\/resources\/css\/sass\/pages\.scss}line{font-family:\00003108}}
+  .file-uploader .qq-upload-button {
+    position: relative;
+    height: 174px;
+    display: block;
+    width: 174px;
+    margin: 2px 0 0 2px;
+    text-indent: -10000px;
+    cursor: pointer !important;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/serhii\/www\/mekooshar\/www\/resources\/css\/sass\/pages\.scss}line{font-family:\00003119}}
+    .file-uploader .qq-upload-button:before {
+      content: 'upload photo';
+      position: absolute;
+      display: block;
+      width: 174px;
+      height: 174px;
+      top: 0px;
+      left: 0px;
+      line-height: 174px;
+      text-indent: 18px;
+      font-size: 14px;
+      text-align: center;
+      color: #129fcd;
+      opacity: 0;
+      background-color: rgba(255, 255, 255, 0.8);
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/serhii\/www\/mekooshar\/www\/resources\/css\/sass\/pages\.scss}line{font-family:\00003136}}
+    .file-uploader .qq-upload-button:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 32px;
+      height: 32px;
+      top: 50%;
+      left: 40px;
+      margin: -16px 0 0 -16px;
+      opacity: 0;
+      background: url(/resources/images/icons/icons.png) -896px 0px;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/serhii\/www\/mekooshar\/www\/resources\/css\/sass\/pages\.scss}line{font-family:\00003150}}
+    .file-uploader .qq-upload-button:hover:before, .file-uploader .qq-upload-button:hover:after {
+      opacity: 1;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/serhii\/www\/mekooshar\/www\/resources\/css\/sass\/pages\.scss}line{font-family:\00003160}}
+.fieldset_countries > ol > li {
+  padding: 0px !important;
+  line-height: 1em !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/serhii\/www\/mekooshar\/www\/resources\/css\/sass\/pages\.scss}line{font-family:\00003164}}
+  .fieldset_countries > ol > li input[type=checkbox] + label {
+    cursor: pointer !important; }

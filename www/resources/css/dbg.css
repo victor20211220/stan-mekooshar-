@@ -1,0 +1,80 @@
+#dbg {
+	position: fixed;
+	top: 100%;
+	width: 100%;
+	left: 0;
+	overflow: visible;
+	padding: 10px;
+	box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
+	background-color: white;
+	z-index: 1000;
+
+	border-top: 1px solid #404040;
+	font-family: serif;
+	font-size: 14px;
+}
+#dbg .dbg-inner {
+	position: relative;
+	max-height: 400px;
+	overflow: auto;
+}
+#dbg.opened {
+	top: auto;
+	bottom: 0;
+}
+#dbg .closer {
+	position: absolute;
+	top: -22px;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	border-bottom-color: white !important;
+	border-left: none;
+	background-color: rgba(255, 255, 255, 0.5);
+	text-align: center;
+	line-height: 20px;
+	cursor: pointer;
+	color: #aaa;
+}
+#dbg .closer:hover, #dbg.opened .closer {
+	border-color: black;
+	color: black;
+	background-color: white;
+}
+#dbg table {
+	margin-bottom: 5px;
+}
+#dbg td {
+	padding: 5px 30px 5px 10px;
+}
+#dbg td span {
+	color: red;
+	font-size: 15px;
+	font-weight: bold;
+	vertical-align: baseline;
+}
+#dbg .dbg_sql_query {
+    padding: 3px 10px;
+    font-size: 13px;
+}
+
+#dbg .dbg_sql_query span {
+    font-weight: bold;
+    vertical-align: baseline;
+}
+
+#dbg span.dbg_sql_time_exec {
+    font-weight: normal;
+}
+
+#dbg span.dbg_sql_time_exec span {
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#dbg span.dbg_sql_time_exec span.dbg_sql_time_over {
+    font-size: 20px;
+}
+

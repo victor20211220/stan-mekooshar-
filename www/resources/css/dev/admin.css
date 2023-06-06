@@ -1,0 +1,2242 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000034}}
+html, body {
+  height: 100%;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\0000310}}
+body {
+  display: block;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #f9f9f9;
+  line-height: 1.4em;
+  font: normal 0.8em "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", helvetica, arial, sans-serif;
+  color: #333;
+  overflow: hidden; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\0000323}}
+body, textarea, input, select {
+  font-family: tahoma; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\0000327}}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "century gothic",verdana,arial,helvetica,sans-serif; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\0000331}}
+a:link {
+  color: #979797;
+  word-break: normal; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\0000335}}
+a:visited {
+  color: #777777; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\0000338}}
+a:hover {
+  color: #555555; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\0000341}}
+a:active {
+  color: #aaa; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\0000345}}
+sup {
+  top: auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\0000348}}
+.user-list {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\0000353}}
+.body-content-inner {
+  overflow-y: scroll;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\0000361}}
+.hidden {
+  display: none !important; }
+
+/* Form elements
+------------------------------------------------------------------------------*/
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\0000367}}
+fieldset {
+  margin-bottom: 0px !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\0000370}}
+  fieldset > ol {
+    margin-bottom: 0px !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\0000374}}
+input[type=text], input[type=email], input[type=password], select, textarea {
+  display: inline-block;
+  margin: 0;
+  border: 1px solid #d9d9d9;
+  padding: 6px;
+  color: #777;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border ease 0.2s, box-shadow ease 0.2s;
+  -webkit-transition: border ease 0.2s, box-shadow ease 0.2s;
+  -moz-transition: border ease 0.2s, box-shadow ease 0.2s;
+  -o-transition: border ease 0.2s, box-shadow ease 0.2s;
+  -ms-transition: border ease 0.2s, box-shadow ease 0.2s;
+  outline: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font: 13px Tahoma, Arial, sans-serif; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\0000390}}
+select, button {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\0000395}}
+select[multiple] {
+  height: auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\0000398}}
+textarea {
+  height: auto;
+  overflow: auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003103}}
+input[type=text]:hover, input[type=email]:hover, input[type=password]:hover, select:hover, textarea:hover {
+  border-color: #cacaca; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003106}}
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, select:focus, textarea:focus {
+  border-color: #aeaeae;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 5px rgba(100, 100, 100, 0.4);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 5px rgba(100, 100, 100, 0.4);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 5px rgba(100, 100, 100, 0.4); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003113}}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #bbb !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003116}}
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #bbb !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003119}}
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #bbb !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003122}}
+.placeholder {
+  color: #bbb !important; }
+
+/* Buttons
+==============================================================================*/
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003128}}
+.btn {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  background: #d6d6d8 url(/resources/images/dashboard/btn-sprite.jpg) top left no-repeat;
+  overflow: hidden;
+  text-indent: -1000px;
+  cursor: pointer;
+  border: 1px solid #5f686e;
+  border-radius: 36px;
+  -moz-border-radius: 38px;
+  -webkit-border-radius: 38px;
+  z-index: 1;
+  vertical-align: top;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003147}}
+.btn:hover {
+  border-color: #4283bf; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003151}}
+.btn-ok {
+  background-position: 0 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003152}}
+.btn-remove {
+  background-position: -36px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003153}}
+.btn-left {
+  background-position: -72px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003154}}
+.btn-right {
+  background-position: -108px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003155}}
+.btn-plus {
+  background-position: -144px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003156}}
+.btn-minus {
+  background-position: -180px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003157}}
+.btn-up {
+  background-position: -216px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003158}}
+.btn-down {
+  background-position: -252px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003159}}
+.btn-close {
+  background-position: -288px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003160}}
+.btn-settings {
+  background-position: -324px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003161}}
+.btn-help {
+  background-position: -360px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003162}}
+.btn-home {
+  background-position: -396px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003164}}
+.btn-ok:hover {
+  background-position: 0 -36px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003165}}
+.btn-remove:hover {
+  background-position: -36px -36px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003166}}
+.btn-left:hover {
+  background-position: -72px -36px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003167}}
+.btn-right:hover {
+  background-position: -108px -36px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003168}}
+.btn-plus:hover {
+  background-position: -144px -36px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003169}}
+.btn-minus:hover {
+  background-position: -180px -36px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003170}}
+.btn-up:hover {
+  background-position: -216px -36px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003171}}
+.btn-down:hover {
+  background-position: -252px -36px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003172}}
+.btn-close:hover {
+  background-position: -288px -36px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003173}}
+.btn-settings:hover {
+  background-position: -324px -36px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003174}}
+.btn-help:hover {
+  background-position: -360px -36px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003175}}
+.btn-home:hover {
+  background-position: -396px -36px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003177}}
+.btn:hover {
+  border-color: #085986; }
+
+/* Edit buttons
+------------------------------------------------------------------------------*/
+/*.btn-edit {
+	position: relative;
+	width: 28px;
+	height: 28px;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	background: transparent url(/resources/images/dashboard/btn-edit.png) top left no-repeat;
+	overflow: hidden;
+	text-indent: -1000px;
+	cursor: pointer;
+}
+.btn-edit-sort	{ background-position: 0 0; cursor: move; }
+.btn-edit-edit  { background-position: -28px 0; }
+.btn-edit-remove{ background-position: -56px 0; }
+
+.btn-edit-sort:hover	{ background-position: 0 -28px; }
+.btn-edit-edit:hover	{ background-position: -28px -28px; }
+.btn-edit-remove:hover	{ background-position: -56px -28px; }*/
+/* main buttons
+------------------------------------------------------------------------------*/
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003206}}
+.menu-list {
+  list-style: none;
+  margin: 0;
+  text-align: center; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003211}}
+.menu-list li {
+  position: relative;
+  display: inline-block;
+  margin: 0 2px;
+  border-radius: 5px;
+  -mox-border-radius: 5px;
+  -webkit-border-radius: 5px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003219}}
+.main-btn {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 2px;
+  border-radius: 6px;
+  -mox-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  z-index: 2;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: #4389c3;
+  background-image: linear-gradient(to bottom, #b9e7ff, #13a7dd 17%, #0a4b80 94%, #4389c3);
+  background-image: -o-linear-gradient(top, #b9e7ff, #13a7dd 17%, #0a4b80 94%, #4389c3);
+  background-image: -ms-linear-gradient(top, #b9e7ff, #13a7dd 17%, #0a4b80 94%, #4389c3);
+  background-image: -moz-linear-gradient(top, #b9e7ff, #13a7dd 17%, #0a4b80 94%, #4389c3);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b9e7ff), color-stop(0.17, #13a7dd), color-stop(0.94, #0a4b80), to(#4389c3));
+  background-image: -webkit-linear-gradient(top, #b9e7ff, #13a7dd 17%, #0a4b80 94%, #4389c3); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003240}}
+.main-btn span {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url(/resources/images/dashboard/main-btn.png);
+  background-repeat: no-repeat;
+  z-index: 2; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003249}}
+.main-btn > span {
+  text-indent: -10000px;
+  overflow: hidden;
+  background-color: #e5e5e5;
+  border-radius: 4px;
+  -mox-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.8), inset 0 4px 2px rgba(255, 255, 255, 0.7), inset 0 -5px 1px rgba(255, 255, 255, 0.6), inset 0 -2px 1px rgba(255, 255, 255, 0.8);
+  -moz-box-shadow: 0 0 1px rgba(255, 255, 255, 0.8), inset 0 4px 2px rgba(255, 255, 255, 0.7), inset 0 -5px 1px rgba(255, 255, 255, 0.6), inset 0 -2px 1px rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.8), inset 0 4px 2px rgba(255, 255, 255, 0.7), inset 0 -5px 1px rgba(255, 255, 255, 0.6), inset 0 -2px 1px rgba(255, 255, 255, 0.8); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003259}}
+.main-btn:hover, .main-btn.active, #list-images .element.active {
+  background-color: #d61d19;
+  background-image: linear-gradient(to bottom, #d61d19, #d61d19 4%, #f5534f 11%, #f5534f 29%, #800000);
+  background-image: -o-linear-gradient(top, #d61d19, #d61d19 4%, #f5534f 11%, #f5534f 29%, #800000);
+  background-image: -ms-linear-gradient(top, #d61d19, #d61d19 4%, #f5534f 11%, #f5534f 29%, #800000);
+  background-image: -moz-linear-gradient(top, #d61d19, #d61d19 4%, #f5534f 11%, #f5534f 29%, #800000);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d61d19), color-stop(0.04, #d61d19), color-stop(0.04, #d61d19), color-stop(0.11, #f5534f), color-stop(0.29, #f5534f), to(#800000));
+  background-image: -webkit-linear-gradient(top, #d61d19, #d61d19 4%, #f5534f 11%, #f5534f 29%, #800000); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003268}}
+.main-btn:active > span {
+  background-color: #d8d8d8; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003271}}
+.main-btn-settings span {
+  background-position: 0 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003272}}
+.main-btn-categories span {
+  background-position: -30px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003273}}
+.main-btn-items span {
+  background-position: -60px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003274}}
+.main-btn-text span {
+  background-position: -90px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003275}}
+.main-btn-images span {
+  background-position: -120px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003276}}
+.main-btn-attachments span {
+  background-position: -150px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003277}}
+.main-btn-videos span {
+  background-position: -180px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003278}}
+.main-btn-audios span {
+  background-position: -210px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003279}}
+.main-btn-remove span {
+  background-position: -240px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003280}}
+.main-btn-edit span {
+  background-position: -270px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003281}}
+.main-btn-move span {
+  background-position: -300px 0;
+  cursor: move; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003282}}
+.main-btn-password span {
+  background-position: -330px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003283}}
+.main-btn-attachments2 span {
+  background-image: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003286}}
+.main-btn-attachments2 > span {
+  overflow: visible; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003289}}
+.main-btn-attachments2 span span {
+  background-image: url("/images/dashboard/main-btn.png");
+  background-position: -360px 0;
+  right: -5px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003295}}
+.nav-btn {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003301}}
+.nav-btn span {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  text-indent: -1000px;
+  background-image: url(/resources/images/dashboard/main-btn.png);
+  background-repeat: no-repeat;
+  z-index: 2; }
+
+/*.nav-btn.main-btn-settings:hover span { background-position: 0 -30px; }
+.nav-btn.main-btn-categories:hover span { background-position: -30px -30px; }
+.nav-btn.main-btn-items:hover span	{ background-position: -60px -30px; }*/
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003316}}
+.nav-btn.main-btn-text:hover span {
+  background-position: -90px -30px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003317}}
+.nav-btn.main-btn-images:hover span {
+  background-position: -120px -30px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003318}}
+.nav-btn.main-btn-attachments:hover span {
+  background-position: -150px -30px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003319}}
+.nav-btn.main-btn-videos:hover span {
+  background-position: -180px -30px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003320}}
+.nav-btn.main-btn-audios:hover span {
+  background-position: -210px -30px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003321}}
+.nav-btn.main-btn-remove:hover span {
+  background-position: -240px -30px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003322}}
+.nav-btn.main-btn-edit:hover span {
+  background-position: -270px -30px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003323}}
+.nav-btn.main-btn-move:hover span {
+  background-position: -300px -30px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003324}}
+.nav-btn.main-btn-password:hover span {
+  background-position: -330px -30px; }
+
+/* info buttons
+------------------------------------------------------------------------------*/
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003328}}
+.btn-info {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  padding: 1px;
+  background-repeat: no-repeat;
+  background-position: left top;
+  text-indent: -1000px;
+  overflow: hidden;
+  border-radius: 4px;
+  -mox-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: #d61d19;
+  background-image: linear-gradient(to bottom, #d61d19, #d61d19 4%, #f5534f 11%, #f5534f 29%, #800000);
+  background-image: -o-linear-gradient(top, #d61d19, #d61d19 4%, #f5534f 11%, #f5534f 29%, #800000);
+  background-image: -ms-linear-gradient(top, #d61d19, #d61d19 4%, #f5534f 11%, #f5534f 29%, #800000);
+  background-image: -moz-linear-gradient(top, #d61d19, #d61d19 4%, #f5534f 11%, #f5534f 29%, #800000);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d61d19), color-stop(0.04, #d61d19), color-stop(0.04, #d61d19), color-stop(0.11, #f5534f), color-stop(0.29, #f5534f), to(#800000));
+  background-image: -webkit-linear-gradient(top, #d61d19, #d61d19 4%, #f5534f 11%, #f5534f 29%, #800000); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003351}}
+.btn-info:hover, .btn-info.active, .header-nav li.active .btn-info {
+  background-color: #4389c3;
+  background-image: linear-gradient(to bottom, #b9e7ff, #13a7dd 17%, #0a4b80 94%, #4389c3);
+  background-image: -o-linear-gradient(top, #b9e7ff, #13a7dd 17%, #0a4b80 94%, #4389c3);
+  background-image: -ms-linear-gradient(top, #b9e7ff, #13a7dd 17%, #0a4b80 94%, #4389c3);
+  background-image: -moz-linear-gradient(top, #b9e7ff, #13a7dd 17%, #0a4b80 94%, #4389c3);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b9e7ff), color-stop(0.17, #13a7dd), color-stop(0.94, #0a4b80), to(#4389c3));
+  background-image: -webkit-linear-gradient(top, #b9e7ff, #13a7dd 17%, #0a4b80 94%, #4389c3); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003361}}
+.btn-info span {
+  display: block;
+  width: 23px;
+  height: 23px;
+  overflow: hidden;
+  background: transparent url(/resources/images/dashboard/info-buttons-sprite.jpg) no-repeat;
+  border-radius: 3px;
+  -mox-border-radius: 3px;
+  -webkit-border-radius: 3px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003370}}
+.btn-info.home-icon span {
+  background-position: 0 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003371}}
+.btn-info.eva-icon span {
+  background-position: -23px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003372}}
+.btn-info.help-icon span {
+  background-position: -46px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003373}}
+.btn-info.settings-icon span {
+  background-position: -69px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003374}}
+.btn-info.login-icon span {
+  background-position: -92px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003375}}
+.btn-info.logout-icon span {
+  background-position: -115px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003377}}
+.btn-info.home-icon:hover span {
+  background-position: 0 -23px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003378}}
+.btn-info.eva-icon:hover span {
+  background-position: -23px -23px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003379}}
+.btn-info.help-icon:hover span {
+  background-position: -46px -23px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003380}}
+.btn-info.settings-icon:hover span {
+  background-position: -69px -23px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003381}}
+.btn-info.login-icon:hover span {
+  background-position: -92px -23px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003382}}
+.btn-info.logout-icon:hover span {
+  background-position: -115px -23px; }
+
+/* Main template
+==============================================================================*/
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003387}}
+.main-container {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  min-width: 980px;
+  position: relative;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding-top: 89px;
+  /*	overflow: hidden;*/
+  /*	position: absolute;*/ }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003401}}
+.header-outer {
+  position: absolute;
+  width: 100%;
+  right: 0px;
+  top: 0px;
+  left: 0px;
+  background-color: white;
+  border-bottom: 1px solid #dadada; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003412}}
+.content-outer {
+  /*	bottom: 10px;
+  	position: absolute;
+  	top: 89px;*/
+  width: 100%;
+  /*	padding: 12px 0;*/
+  background-color: #f9f9f9;
+  /*	border-top: 1px solid white;*/
+  min-height: 100%;
+  height: 100%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003424}}
+.header {
+  position: relative;
+  margin: 0 auto;
+  /*	width: 100%;*/
+  padding: 5px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003430}}
+.content {
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100%;
+  position: relative;
+  /*	height:100%;*/ }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003437}}
+.content-box-outer, .content-box {
+  /*	bottom: 0;
+  	position: absolute;
+  	top: 0px;*/
+  width: 100%;
+  margin: 0 0px;
+  z-index: 2;
+  min-height: 100%;
+  height: 100%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003447}}
+.content-box {
+  top: 0;
+  margin: 0;
+  height: 100%;
+  /*	position:relative;*/
+  overflow: hidden;
+  background-color: f9f9f9;
+  /*	border: 1px solid #bbb;*/
+  /*	border-radius: 12px; -moz-border-radius: 12px; -webkit-border-radius: 12px;*/
+  /*	box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1);*/
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003459}}
+.header .logo {
+  position: absolute;
+  top: 24px;
+  left: 20px;
+  z-index: 5; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003466}}
+.header .logo a {
+  overflow: visible;
+  text-indent: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003470}}
+.header .logo a:after {
+  position: absolute;
+  content: 'Dashboard';
+  top: 0;
+  bottom: 0;
+  left: 38px;
+  padding: 0 10px 0 14px;
+  line-height: 38px;
+  font-size: 15px;
+  color: #226BA9;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003483}}
+.header .nav {
+  position: relative;
+  height: 78px;
+  padding-right: 160px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003488}}
+.header .nav ul {
+  float: right;
+  padding-top: 20px;
+  list-style: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003493}}
+.header .nav ul li {
+  float: left;
+  margin-left: 10px;
+  line-height: 25px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003498}}
+.header .ukietech-logo {
+  position: absolute;
+  overflow: hidden;
+  text-indent: -1000px;
+  top: 0;
+  right: 60px;
+  width: 80px;
+  height: 78px;
+  background: url(/resources/images/dashboard/ukietech-logo.png) top left no-repeat; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003509}}
+.header .crumbs {
+  position: absolute;
+  left: 202px;
+  bottom: 3px;
+  padding: 5px;
+  font-size: 11px;
+  opacity: 0.7; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003517}}
+.header .crumbs:before {
+  position: absolute;
+  content: '';
+  top: -4px;
+  left: -80px;
+  width: 70px;
+  height: 29px;
+  background: transparent url(/resources/images/dashboard/crumbs.png); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003526}}
+.header .crumbs:hover {
+  opacity: 1; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003529}}
+.header .crumbs a {
+  text-decoration: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003532}}
+.header .crumbs span {
+  display: inline-block;
+  padding: 0 4px;
+  color: #bbb; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003538}}
+.header #ajax-message {
+  position: absolute;
+  bottom: -10px;
+  right: 100px;
+  font: bold 0.8em tahoma;
+  padding: 0.3em 1em;
+  background-color: #f33;
+  color: #fff;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003552}}
+.header #ajax-message.error {
+  background-color: #f33;
+  color: #fff; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003557}}
+.autoform fieldset > ol > li > .autoform-label {
+  padding-top: 6px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003562}}
+.content .left-block {
+  float: left;
+  min-height: 100%;
+  width: 220px;
+  position: relative; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003568}}
+.content .center-block {
+  margin-left: 220px;
+  min-height: 100%;
+  overflow: auto;
+  padding-left: 15px;
+  z-index: 1;
+  overflow-x: hidden; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003577}}
+.content:before {
+  content: '';
+  overflow: hidden;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 220px;
+  width: 1px;
+  background-color: #c4c4c4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003589}}
+.content .content-footer {
+  position: absolute;
+  right: 0;
+  left: 221px;
+  bottom: 0px;
+  height: 22px;
+  padding: 4px 10px 4px 25px;
+  border-top: 1px solid #bbb;
+  text-align: right;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #777;
+  z-index: 4;
+  border-radius: 0 0 12px 0;
+  -moz-border-radius: 0 0 12px 0;
+  -webkit-border-radius: 0 0 12px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003604}}
+.content .content-data {
+  padding-left: 30px;
+  z-index: 3;
+  position: relative;
+  padding-bottom: 10px;
+  box-sizing: border-box; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003612}}
+.content-inner {
+  max-width: 900px;
+  margin: 0 auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003616}}
+.content .left-block .website-modules {
+  top: 55px;
+  text-align: right; }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003626}}
+  .content .left-block .website-modules {
+    text-align: right; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003630}}
+  .content .left-block {
+    width: 220px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003636}}
+  .content .center-block {
+    margin-left: 220px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003642}}
+  .content:before {
+    content: '';
+    left: 220px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003647}}
+  .content .content-footer {
+    left: 221px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003655}}
+  .content-inner {
+    max-width: 900px;
+    margin: 0 auto; } }
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003666}}
+  .content .left-block {
+    width: 220px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003672}}
+  .content .center-block {
+    margin-left: 220px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003677}}
+  .content:before {
+    content: '';
+    left: 220px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003683}}
+  .content .content-footer {
+    left: 221px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003691}}
+  .content-inner {
+    max-width: 900px;
+    margin: 0 auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003695}}
+  .content .left-block .website-modules {
+    text-align: right; } }
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003707}}
+  .content .left-block {
+    width: 220px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003713}}
+  .content .center-block {
+    margin-left: 220px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003718}}
+  .content:before {
+    left: 220px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003723}}
+  .content .content-footer {
+    left: 221px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003731}}
+  .content-inner {
+    max-width: 900px;
+    margin: 0 auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003735}}
+  .content .left-block .website-modules {
+    text-align: right; } }
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003745}}
+  .content .left-block {
+    width: 250px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003751}}
+  .content .center-block {
+    margin-left: 250px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003756}}
+  .content:before {
+    content: '';
+    left: 250px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003762}}
+  .content .content-footer {
+    left: 251px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003770}}
+  .content-inner {
+    max-width: 1100px;
+    margin: 0 auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003774}}
+  .content .left-block .website-modules {
+    text-align: right; } }
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003783}}
+  .content .left-block {
+    width: 300px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003789}}
+  .content .center-block {
+    margin-left: 300px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003794}}
+  .content:before {
+    content: '';
+    left: 300px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003799}}
+  .content .content-footer {
+    left: 301px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003808}}
+  .content-inner {
+    max-width: 1200px;
+    margin: 0 auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003812}}
+  .content .left-block .website-modules {
+    text-align: center; } }
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003822}}
+  .content .left-block {
+    width: 220px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003828}}
+  .content .center-block {
+    margin-left: 220px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003833}}
+  .content:before {
+    content: '';
+    left: 220px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003838}}
+  .content .content-footer {
+    left: 221px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003846}}
+  .content-inner {
+    max-width: 750px;
+    margin: 0 auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003850}}
+  .content .left-block .website-modules {
+    text-align: right; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003857}}
+.content .left-block .website-modules {
+  /*	position: absolute;
+  	z-index: 5;
+  	top: 0;
+  	left: 0;
+  	bottom: 0;
+  	width: 220px;*/ }
+
+/* iPhone 4 ----------- */
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003873}}
+.website-modules {
+  z-index: 2; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003877}}
+.content .left-block .website-settings {
+  padding: 12px 10px 8px 16px;
+  border-bottom: 1px solid #bbb; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003881}}
+.content .left-block .website-settings a:after {
+  content: 'Website settings';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 30px;
+  width: 130px;
+  padding-left: 15px;
+  text-transform: uppercase;
+  line-height: 34px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003892}}
+.content .button-user_list:after {
+  content: "Website settings";
+  left: 30px;
+  line-height: 34px;
+  padding-left: 15px;
+  text-transform: uppercase;
+  width: 130px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003901}}
+.content .left-block .website-modules .element {
+  position: relative;
+  z-index: 3;
+  padding: 14px 0 0 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003906}}
+.content .left-block .website-modules .element:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  height: 0;
+  border-bottom: 1px solid #e1e1e1; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003916}}
+.content .left-block .website-modules h4 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 0 14px 0 10px;
+  line-height: 20px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003923}}
+.content .left-block .website-modules a {
+  display: block;
+  border: 1px solid transparent;
+  border-left: none;
+  border-right: none;
+  line-height: 16px;
+  font-size: 13px;
+  padding: 4px 14px 4px 10px;
+  text-decoration: none;
+  font-family: Tahoma, Geneva, Kalimati, sans-serif; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003934}}
+.content .left-block .website-modules a.active {
+  position: relative;
+  z-index: 4;
+  background-color: white;
+  border-color: #c4c4c4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003941}}
+.content .left-block .website-modules a.active:after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 3px;
+  right: -9px;
+  border: 1px solid transparent;
+  border-top-color: #c4c4c4;
+  border-right-color: #c4c4c4;
+  background-color: white;
+  box-shadow: 2px -2px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 2px -2px 2px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 2px -2px 2px rgba(0, 0, 0, 0.05);
+  transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003955}}
+.ie8 .content .left-block .website-modules a.active:after {
+  display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003961}}
+.content .content-header {
+  position: relative;
+  height: 38px;
+  margin-left: -30px;
+  padding: 8px 0 8px 25px;
+  border-bottom: 1px solid #bbb;
+  border-radius: 0 12px 0 0;
+  -moz-border-radius: 0 12px 0 0;
+  -webkit-border-radius: 0 12px 0 0;
+  z-index: 4; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003970}}
+.content .content-header .back_button {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  padding: 8px 15px 8px 30px;
+  width: 40px;
+  border-right: 1px dotted #CCCCCC; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003978}}
+.content .content-header h1 {
+  line-height: 28px;
+  font-size: 14px;
+  margin: 5px 0 5px 70px;
+  padding-left: 10px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003984}}
+.content .content-header .filters-block {
+  position: absolute;
+  bottom: 8px;
+  right: 60px;
+  color: #979797;
+  line-height: 24px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003991}}
+.content .content-header .filters-block select {
+  padding: 2px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\00003994}}
+.content .content-nav, .file-manager .content-nav {
+  position: absolute;
+  width: 250px;
+  bottom: -20px;
+  left: 50%;
+  margin-left: -125px;
+  text-align: center; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031002}}
+.content .content-nav a, .file-manager .content-nav a {
+  margin: 0 4px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031005}}
+.content .content-nav .active {
+  color: black; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031011}}
+.content .content-footer .status {
+  line-height: 22px;
+  float: right; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031017}}
+.content .content-footer:before, .content .content-header:after {
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  height: 11px;
+  background-image: url(/resources/images/dashboard/shadow.png);
+  background-repeat: no-repeat; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031026}}
+.content .content-footer:before {
+  bottom: 100%;
+  background-position: top center; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031030}}
+.content .content-header:after {
+  top: 100%;
+  background-position: bottom center; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031036}}
+.content .content-data.without-footer {
+  bottom: 0;
+  border-radius: 0 0 12px 0;
+  -moz-border-radius: 0 0 12px 0;
+  -webkit-border-radius: 0 0 12px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031040}}
+.content .content-data-inner {
+  padding: 30px 20px 20px 0px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031044}}
+.content .content-header .remove-btn {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  opacity: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031050}}
+.content .content-header:hover .remove-btn {
+  opacity: 1; }
+
+/* Categories and items
+==============================================================================*/
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031056}}
+.categories-block, .items-block {
+  padding: 25px 0 20px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031059}}
+ul.items-list {
+  position: relative;
+  margin: 0;
+  margin: 4px 15px 4px 0;
+  padding: 5px 0;
+  /*	overflow: hidden;*/
+  list-style: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031067}}
+ul.items-list li {
+  position: relative;
+  margin: 0;
+  padding: 3px;
+  overflow: hidden; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031073}}
+ul.items-list .sortable-handler {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 30px;
+  bottom: 3px;
+  background: transparent url(/resources/images/dashboard/sorting-icon.png) center center no-repeat;
+  cursor: move;
+  opacity: 0;
+  transition: opacity ease 0.2s;
+  -webkit-transition: opacity ease 0.2s;
+  -moz-transition: opacity ease 0.2s;
+  -ms-transition: opacity ease 0.2s;
+  -o-transition: opacity ease 0.2s; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031084}}
+ul.items-list li:first-child .sortable-handler {
+  opacity: 1; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031087}}
+ul.items-list:hover li .sortable-handler {
+  opacity: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031090}}
+ul.items-list li:hover .sortable-handler {
+  opacity: 1; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031095}}
+ul.items-list .item {
+  position: relative;
+  overflow: hidden;
+  margin-left: 30px;
+  background-color: white;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031104}}
+ul.items-list li:hover .item {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031108}}
+ul.items-list .item-actions {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  right: 0;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0 6px 6px 0;
+  -moz-border-radius: 0 6px 6px 0;
+  -webkit-border-radius: 0 6px 6px 0;
+  transition: opacity ease 0.3s 0.5s;
+  -webkit-transition: opacity ease 0.3s 0.5s;
+  -moz-transition: opacity ease 0.3s 0.5s;
+  -ms-transition: opacity ease 0.3s 0.5s;
+  -o-transition: opacity ease 0.3s 0.5s; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031124}}
+ul.items-list .item-actions:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  border-left: 1px solid #ccc; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031134}}
+ul.items-list .item-actions .nav-btn {
+  margin: 0 1px;
+  padding: 5px 4px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031138}}
+ul.items-list .item-actions .nav-btn:first-child {
+  margin-left: 4px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031141}}
+ul.items-list .item-actions .nav-btn:last-child {
+  margin-right: 4px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031144}}
+ul.items-list .item-actions .main-btn-remove {
+  margin-left: 8px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031148}}
+ul.items-list li:hover .item-actions {
+  opacity: 1;
+  transition: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031158}}
+.item-type, .item-type-plus {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 39px;
+  border-right: 1px dotted #ccc;
+  background: url(/resources/images/dashboard/items-list.png) top left no-repeat; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031168}}
+.item-type-plus {
+  border-right-color: transparent; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031172}}
+.categories-block .item-type {
+  background-position: 0 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031173}}
+.items-block .item-type {
+  background-position: -40px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031174}}
+.audios-list .item-type {
+  background-position: -80px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031175}}
+.attachments-list .item-type {
+  background-position: -120px 0;
+  border-color: transparent;
+  left: 10px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031176}}
+.videos-list .item-type {
+  background-position: -160px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031178}}
+.type-category.item-type-plus {
+  background-position: -200px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031179}}
+.type-item.item-type-plus {
+  background-position: -240px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031180}}
+.type-image.item-type-plus {
+  background-position: -280px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031181}}
+.type-video.item-type-plus {
+  background-position: -320px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031182}}
+.type-audio.item-type-plus {
+  background-position: -360px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031183}}
+.type-attachment.item-type-plus {
+  background-position: -400px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031185}}
+.categories-block li:hover .item-type {
+  background-position: 0 -40px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031186}}
+.items-block li:hover .item-type {
+  background-position: -40px -40px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031187}}
+.audios-list li:hover .item-type {
+  background-position: -80px -40px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031188}}
+.attachments-list li:hover .item-type {
+  background-position: -120px -40px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031189}}
+.videos-list li:hover .item-type {
+  background-position: -160px -40px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031191}}
+.add-item:hover .type-category.item-type-plus {
+  background-position: -200px -40px;
+  border-color: #ccc; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031192}}
+.add-item:hover .type-item.item-type-plus {
+  background-position: -240px -40px;
+  border-color: #ccc; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031193}}
+.item-edit-image:hover .type-image.item-type-plus {
+  background-position: -280px -40px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031194}}
+.item-edit-video:hover .type-video.item-type-plus {
+  background-position: -320px -40px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031195}}
+.add-item:hover .type-audio.item-type-plus {
+  background-position: -360px -40px;
+  border-color: #ccc; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031196}}
+.add-item:hover .type-attachment.item-type-plus {
+  background-position: -400px -40px;
+  border-color: #ccc; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031198}}
+ul.items-list .item-title {
+  margin: 0 0 0 40px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031201}}
+ul.attachments-list .item-title {
+  margin-left: 50px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031204}}
+ul.items-list .item-title a, ul.items-list .item-title span {
+  display: block;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031215}}
+.add-item {
+  position: relative;
+  display: block;
+  padding: 10px 10px 10px 50px;
+  line-height: 20px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031224}}
+.content-data .add-item {
+  margin: 12px 18px 0 33px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031227}}
+.add-item .item-type-plus {
+  border-right-color: transparent; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031230}}
+.categories-block .add-item:hover,
+.items-block .add-item:hover,
+.files-block .add-item:hover {
+  border-color: #eee;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.04); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031236}}
+.content-footer .add-item .item-type-plus {
+  border-right-color: transparent !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031239}}
+.content-footer .add-item {
+  float: left;
+  padding: 0 2px 0 40px;
+  overflow: hidden; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031244}}
+.content-footer .add-item .item-type-plus {
+  top: -10px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031248}}
+.pager {
+  text-align: center;
+  padding: 10px; }
+
+/* Attachments
+==============================================================================*/
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031255}}
+.files-block {
+  padding: 25px 5px 10px 8px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031259}}
+.images-list {
+  list-style: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031262}}
+.images-list li {
+  float: left;
+  padding: 5px;
+  margin: 5px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 4px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031270}}
+.images-list li .thumb a {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031279}}
+.images-list li .thumb a:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  background: rgba(255, 255, 255, 0.5) url(/resources/images/dashboard/zoom.png) center center no-repeat;
+  transition: opacity ease 0.3s;
+  -webkit-transition: opacity ease 0.3s;
+  -moz-transition: opacity ease 0.3s;
+  -ms-transition: opacity ease 0.3s;
+  -o-transition: opacity ease 0.3s; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031291}}
+.images-list li .thumb a:hover:after {
+  opacity: 1; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031295}}
+.images-list li .thumb img {
+  width: 100px;
+  height: 100px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031301}}
+.images-list li .nav {
+  opacity: 0;
+  transition: opacity ease 0.3s 0.5s;
+  -webkit-transition: opacity ease 0.3s 0.5s;
+  -moz-transition: opacity ease 0.3s 0.5s;
+  -ms-transition: opacity ease 0.3s 0.5s;
+  -o-transition: opacity ease 0.3s 0.5s; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031310}}
+.images-list li .nav {
+  padding-top: 3px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031314}}
+.images-list li:hover .nav {
+  opacity: 1;
+  transition: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031324}}
+.videos-list li .thumb a:after {
+  top: 50%;
+  left: 50%;
+  bottom: auto;
+  right: auto;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  margin-left: -20px;
+  border-radius: 40px;
+  -moz-border-radius: 40px;
+  -webkit-border-radius: 40px;
+  background: rgba(255, 255, 255, 0.4) url(/resources/images/dashboard/play-btn.png) 14px 12px no-repeat;
+  opacity: 1;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  transition: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031339}}
+.videos-list li .thumb a:hover:after {
+  margin-top: -19px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031344}}
+.add-image, .add-video {
+  float: left;
+  padding: 5px;
+  margin: 5px;
+  padding-bottom: 36px;
+  overflow: hidden; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031351}}
+.add-image a, .add-video a {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 98px;
+  height: 98px;
+  border: 1px solid #ccc;
+  text-indent: -1000px;
+  text-align: center;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031363}}
+.add-image a:hover, .add-video a:hover {
+  border: 1px solid #bbb; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031366}}
+.add-image a .item-type-plus, .add-video a .item-type-plus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -20px;
+  margin-top: -20px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031374}}
+.add-item.item-edit-attachment {
+  padding-left: 60px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031377}}
+.add-item.item-edit-attachment .item-type-plus {
+  left: 5px;
+  padding-right: 5px; }
+
+/* Settings
+==============================================================================*/
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031384}}
+ul.settings-list .item-title {
+  margin-left: 5px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031390}}
+.none {
+  display: none; }
+
+/* Boxes
+==============================================================================*/
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031396}}
+.box-warning {
+  padding: 5px;
+  margin: 20px 0;
+  background-color: #eceff6;
+  border: 1px solid #d4dae8; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031403}}
+.box-info {
+  padding: 5px;
+  margin: 20px 0;
+  background-color: #fff9d7;
+  border: 1px solid #e2c822; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031410}}
+.box-error {
+  padding: 5px;
+  margin: 20px 0;
+  background-color: #ffebe8;
+  border: 1px solid #dd3c10; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031417}}
+.box-warning ul, .box-info ul, .box-error ul {
+  padding: 0;
+  margin: 0;
+  list-style: none inside; }
+
+/* Grig
+==============================================================================*/
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031425}}
+ul.grid-sortable {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031431}}
+ul.grid-sortable li {
+  float: left;
+  margin: 3px;
+  padding: 3px;
+  width: 150px;
+  height: 150px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031439}}
+.filters {
+  box-shadow: inset 0 0 13px rgba(0, 0, 0, 0.1); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031442}}
+.filters td {
+  background-color: #f9f9f9; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031446}}
+#userList td {
+  vertical-align: middle; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031449}}
+#userList tbody tr:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
+
+/* Dashboard
+================================================================================
+==============================================================================*/
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031456}}
+.body-iframe {
+  background-color: white; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031459}}
+.content-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031467}}
+.ajaxForm form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031472}}
+.ajax-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  height: 20px;
+  border-bottom: 1px dotted #bbb;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: normal;
+  padding: 9px 15px 10px 48px;
+  z-index: 2; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031487}}
+.ajax-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  height: 40px;
+  padding: 8px 10px 0;
+  border-top: 1px solid #bbb;
+  z-index: 2;
+  overflow: hidden; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031499}}
+.ajax-header .main-btn {
+  position: absolute;
+  top: 0;
+  left: 4px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031504}}
+.ajax-data {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 49px;
+  overflow: auto;
+  padding: 15px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031513}}
+.ajax-footer .btn-ok {
+  float: right; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031517}}
+#videos .thumb {
+  margin-bottom: 3px;
+  min-width: 200px;
+  min-height: 150px;
+  position: relative; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031523}}
+#videos .thumb:before {
+  content: 'loading...';
+  position: absolute;
+  height: 20px;
+  line-height: 20px;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  left: 0;
+  margin-top: -10px;
+  z-index: 0;
+  text-shadow: 0 0 20px black; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031536}}
+#videos .thumb img {
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  z-index: 1; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031543}}
+#videos .autoform-content-top {
+  font-size: 0.9em;
+  text-align: left; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031548}}
+.btn.disabled {
+  opacity: 0.7; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031551}}
+.btn.disabled:hover {
+  background-position: inherit;
+  border-color: inherit; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031557}}
+.file-manager .ajax-data {
+  bottom: 49px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031560}}
+.file-manager .content-nav {
+  top: 14px;
+  bottom: auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031564}}
+.file-manager #files-list > div {
+  display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031567}}
+.file-manager #files-list > div.active {
+  display: block; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031570}}
+.file-manager #list-images ul {
+  list-style: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031573}}
+.file-manager #list-images li {
+  float: left;
+  margin: 0;
+  padding: 8px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031578}}
+.file-manager #list-images .thumb {
+  padding: 3px;
+  background-color: white; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031582}}
+.file-manager #list-images .element, .file-manager #list-attachments .element {
+  cursor: pointer;
+  border-radius: 6px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031586}}
+.file-manager #list-images img {
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031590}}
+.file-manager #list-images .element:hover {
+  background-color: rgba(245, 190, 190, 0.8); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031593}}
+.file-manager #list-images .element.active {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031596}}
+.file-manager #list-attachments .element.active {
+  border-color: #d15e55;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); }
+
+/* For mobile
+==============================================================================*/
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031603}}
+.mobile ul.items-list .item-actions {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.8); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031607}}
+.mobile .images-list li .nav {
+  opacity: 1;
+  transition: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031611}}
+.mobile .sortable-handler {
+  opacity: 0 !important; }
+
+/* Pop up box ----------------------------------------------------------------*/
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031620}}
+.pbox-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: auto;
+  overflow-x: auto;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  opacity: 0;
+  -webkit-overflow-scrolling: touch;
+  transition: opacity ease 0.4s;
+  -webkit-transition: opacity ease 0.4s;
+  -moz-transition: opacity ease 0.4s;
+  -ms-transition: opacity ease 0.4s;
+  -o-transition: opacity ease 0.4s;
+  background-color: rgba(0, 0, 0, 0.2); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031634}}
+.filter-blur-3 {
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  filter: url(/resources/images/svg/blur.svg#filterBlur3); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031640}}
+.pbox-outer {
+  position: relative;
+  padding: 50px;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031647}}
+.pbox-overlay .pbox-outer.anim {
+  transition: margin-top ease 0.4s;
+  -webkit-transition: margin-top ease 0.4s;
+  -moz-transition: margin-top ease 0.4s;
+  -ms-transition: margin-top ease 0.4s;
+  -o-transition: margin-top ease 0.4s; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031650}}
+.pbox-outer .pbox {
+  position: relative;
+  height: 100%;
+  min-height: 45px;
+  transition: transform ease 0.4s;
+  -webkit-transition: -webkit-transform ease 0.4s;
+  -moz-transition: transform ease 0.4s;
+  -ms-transition: transform ease 0.4s;
+  -o-transition: transform ease 0.4s;
+  transform: scale(0.95) translateY(-20px);
+  -webkit-transform: scale(0.95) translateY(-20px); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031657}}
+.pbox-outer[data-skin=default] .pbox {
+  background-color: white; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031662}}
+.pbox-outer[data-skin=gray] .pbox {
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.2);
+  /*padding: 5px;*/ }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031669}}
+.pbox-outer .pbox.anim {
+  animation: mymove 0.5s;
+  -moz-animation: mymove 0.5s;
+  -webkit-animation: mymove 0.5s;
+  animation-iteration-count: infinite; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031676}}
+.pbox-outer .pbox-inner {
+  /*	overflow: hidden;  box shadow not work!  */
+  height: 100%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031680}}
+.pbox-outer .box-closer {
+  position: absolute;
+  display: none;
+  background-color: rgba(62, 103, 155, 0.75);
+  border: 1px solid #3E679B;
+  top: 50px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  font-size: 37px;
+  line-height: 36px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 1002; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031697}}
+.pbox-outer .box-closer:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+  color: #3e679b; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031701}}
+.pbox-outer .box-loader,
+.pbox-outer .box-loader-helper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: transparent url(/resources/images/icons/loading.gif) center center no-repeat; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031708}}
+.pbox-outer .box-loader-helper {
+  background-color: rgba(255, 255, 255, 0.3); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031712}}
+.pbox-overlay.opened {
+  opacity: 1; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031715}}
+.pbox-overlay.opened .pbox {
+  transform: inherit;
+  -webkit-transform: inherit; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031719}}
+.pbox-title {
+  position: relative;
+  height: 27px;
+  width: 100%;
+  background-color: #129fcd; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031725}}
+  .pbox-title:before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0px;
+    top: 0px;
+    width: 25px;
+    height: 27px;
+    background-color: #7d7d7d; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031735}}
+  .pbox-title:after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 4px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: #FFF; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031746}}
+  .pbox-title .pbox-title-name {
+    position: relative;
+    padding: 2px 0 40px 32px;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #FFF; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031753}}
+    .pbox-title .pbox-title-name:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      top: 9px;
+      left: 10px;
+      border-top: 4px solid transparent;
+      border-left: 6px solid #129fcd;
+      border-bottom: 4px solid transparent;
+      z-index: 1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031767}}
+  .pbox-title .btn-close {
+    position: absolute;
+    right: 12px;
+    top: 4px;
+    width: 17px;
+    height: 17px;
+    border-radius: 8px;
+    background-color: #FFF;
+    margin: 0px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031777}}
+    .pbox-title .btn-close:before {
+      width: 9px;
+      height: 3px;
+      top: 7px;
+      left: 4px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031783}}
+    .pbox-title .btn-close:after {
+      height: 9px;
+      width: 3px;
+      left: 7px;
+      top: 4px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031791}}
+.pbox-content {
+  position: relative;
+  border: 1px solid #cdcdcd;
+  min-height: 100px;
+  width: 100%;
+  padding: 5px;
+  background-color: #FFF;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031800}}
+.pbox-message {
+  text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031803}}
+  .pbox-message .message-text {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031809}}
+  .pbox-message a {
+    display: inline-block;
+    width: 100px;
+    padding: 5px 10px;
+    margin: 1px 5px 20px 5px;
+    background-color: #e5f4fa;
+    color: #000;
+    font-weight: bold; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031818}}
+    .pbox-message a:hover {
+      background-color: #bae2f2; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031821}}
+    .pbox-message a span {
+      right: 10px;
+      left: auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031828}}
+.pbox-confirm {
+  text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031831}}
+  .pbox-confirm .confirm-text {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031837}}
+  .pbox-confirm a {
+    display: inline-block;
+    width: 100px;
+    padding: 5px 10px;
+    margin: 1px 5px 20px 5px;
+    background-color: #e5f4fa;
+    color: #000;
+    font-weight: bold; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031846}}
+    .pbox-confirm a:hover {
+      background-color: #bae2f2; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031849}}
+    .pbox-confirm a span {
+      right: 10px;
+      left: auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031859}}
+.pbox .shareupdate {
+  padding: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031862}}
+  .pbox .shareupdate textarea {
+    width: 415px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031866}}
+  .pbox .shareupdate #shareupdate-fieldset-fields li {
+    margin: 0px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031871}}
+  .pbox .shareupdate #shareupdate-fieldset-submit li {
+    height: 25px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031877}}
+.pbox .pbox-image {
+  margin: 0 auto;
+  display: block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031881}}
+.pbox #newmessage {
+  padding: 0 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031884}}
+  .pbox #newmessage .userava {
+    width: 388px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031887}}
+    .pbox #newmessage .userava .userava-info {
+      width: 325px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031891}}
+  .pbox #newmessage input {
+    width: 415px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031894}}
+  .pbox #newmessage textarea {
+    width: 414px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031904}}
+.table-white tbody tr td {
+  background-color: #FFF; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031908}}
+.table-white tbody tr.is-new td {
+  background-color: rgba(0, 0, 0, 0.05); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031917}}
+.line-top {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #bbb; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031922}}
+.toppanel-statistic {
+  padding: 20px 10px;
+  border: 1px solid #cdcdcd;
+  background-color: #FFF; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/vagrant\/www\/mekooshar\.com\/www\/resources\/css\/sass\/admin\.scss}line{font-family:\000031928}}
+a.btn-roundblue {
+  color: #FFF;
+  text-align: center;
+  text-decoration: none;
+  line-height: 20px; }

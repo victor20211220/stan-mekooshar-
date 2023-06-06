@@ -1,0 +1,1127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemadesigner version="6.5">
+<source>
+<database charset="utf8" collation="utf8_general_ci">mekoo</database>
+</source>
+<canvas zoom="100">
+<tables>
+<table name="users" view="standard">
+<left>1063</left>
+<top>482</top>
+<width>302</width>
+<height>685</height>
+<sql_create_table>CREATE TABLE `users` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `isSubscribed` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `updateDate` timestamp NULL DEFAULT NULL,
+  `accountType` tinyint(1) DEFAULT '0' COMMENT 'Basic, Full',
+  `birthdayDate` timestamp NULL DEFAULT NULL,
+  `name` varchar(16) DEFAULT NULL,
+  `password` varchar(48) NOT NULL COMMENT 'Salt:8 + SHA1(Salt + Password):40',
+  `token` varchar(32) DEFAULT NULL COMMENT 'Auth cookie token',
+  `role` varchar(16) NOT NULL DEFAULT 'user' COMMENT 'ACL role',
+  `email` varchar(128) NOT NULL,
+  `email2` varchar(128) NOT NULL,
+  `firstName` varchar(32) NOT NULL,
+  `lastName` varchar(32) NOT NULL,
+  `gender` set('M','F') NOT NULL DEFAULT 'M',
+  `address` varchar(128) NOT NULL,
+  `city` varchar(64) NOT NULL DEFAULT '',
+  `state` varchar(64) NOT NULL DEFAULT '',
+  `zip` varchar(24) NOT NULL DEFAULT '',
+  `country` varchar(64) NOT NULL DEFAULT '',
+  `phone` varchar(32) NOT NULL DEFAULT '',
+  `websites` text COMMENT 'serialize array socials',
+  `professionalHeadline` varchar(128) NOT NULL COMMENT '(Posada)',
+  `industry` int(4) DEFAULT NULL COMMENT '(Sfera dijalnosti)',
+  `summaryText` text,
+  `summaryLinks` text COMMENT 'serialize',
+  `maritalStatus` tinyint(1) DEFAULT NULL,
+  `interests` text,
+  `personalDetails` text,
+  `typeShowActivityFeed` tinyint(1) NOT NULL DEFAULT '0' COMMENT '(All, Friends, Network, All)',
+  `typeLevelAccessConnection` tinyint(1) NOT NULL DEFAULT '0' COMMENT '(All, Friends, Network, All)',
+  `createMyActivityFeed` tinyint(1) NOT NULL DEFAULT '1',
+  `avaToken` varchar(16) DEFAULT NULL,
+  `isConfirmed` tinyint(1) NOT NULL DEFAULT '1',
+  `isInvisible` tinyint(1) NOT NULL DEFAULT '0',
+  `isRemoved` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email_idx_1` (`email`),
+  UNIQUE KEY `name_idx_1` (`name`),
+  KEY `confirmed_idx` (`isConfirmed`)
+) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="universities" view="standard">
+<left>1947</left>
+<top>10</top>
+<width>283</width>
+<height>405</height>
+<sql_create_table>CREATE TABLE `universities` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(128) NOT NULL,
+  `typeInstitute` int(1) NOT NULL DEFAULT '0',
+  `description` text,
+  `email` varchar(64) DEFAULT NULL,
+  `yearFounded` int(4) DEFAULT NULL,
+  `yearLevel` varchar(32) DEFAULT NULL,
+  `url` varchar(128) DEFAULT NULL,
+  `address` varchar(128) DEFAULT NULL,
+  `city` varchar(64) DEFAULT NULL,
+  `state` varchar(64) DEFAULT NULL,
+  `zip` varchar(24) DEFAULT NULL,
+  `country` varchar(64) DEFAULT NULL,
+  `phone1` varchar(32) DEFAULT NULL,
+  `phone2` varchar(32) DEFAULT NULL,
+  `fax` varchar(32) DEFAULT NULL,
+  `countUndergradPopulation` int(7) NOT NULL DEFAULT '0',
+  `countDraduatePopulation` int(7) NOT NULL DEFAULT '0',
+  `isRegistred` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="companies" view="standard">
+<left>1967</left>
+<top>759</top>
+<width>250</width>
+<height>405</height>
+<sql_create_table>CREATE TABLE `companies` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(128) NOT NULL,
+  `user_id` int(10) unsigned DEFAULT NULL,
+  `createDate` timestamp NULL DEFAULT NULL,
+  `email` varchar(64) DEFAULT NULL COMMENT 'email company',
+  `domain` varchar(64) DEFAULT NULL,
+  `email2` varchar(64) DEFAULT NULL,
+  `url` varchar(128) DEFAULT NULL,
+  `year` int(4) DEFAULT NULL,
+  `type` int(2) DEFAULT NULL,
+  `size` int(2) DEFAULT NULL,
+  `phone` varchar(32) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `industry` int(3) DEFAULT NULL,
+  `companyStatus` int(2) DEFAULT NULL,
+  `description` text,
+  `avaToken` varchar(16) DEFAULT NULL,
+  `coverToken` varchar(16) DEFAULT NULL,
+  `followers` int(6) DEFAULT NULL,
+  `isAgree` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  CONSTRAINT `company_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="projects" view="standard">
+<left>1968</left>
+<top>1171</top>
+<width>261</width>
+<height>120</height>
+<sql_create_table>CREATE TABLE `projects` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(128) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="profile_education" view="standard">
+<left>1606</left>
+<top>16</top>
+<width>290</width>
+<height>260</height>
+<sql_create_table>CREATE TABLE `profile_education` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned NOT NULL,
+  `university_id` int(10) unsigned NOT NULL,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `yearFrom` int(4) DEFAULT NULL,
+  `yearTo` int(4) DEFAULT NULL,
+  `degree` varchar(160) DEFAULT NULL,
+  `fieldOfStudy` varchar(160) DEFAULT NULL,
+  `grade` varbinary(128) DEFAULT NULL,
+  `activitiesAndSocieties` text,
+  `description` text,
+  PRIMARY KEY (`id`,`user_id`),
+  KEY `user_id` (`user_id`),
+  KEY `university_id` (`university_id`),
+  CONSTRAINT `profile_education_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `profile_education_ibfk_2` FOREIGN KEY (`university_id`) REFERENCES `universities` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="profile_expirience" view="standard">
+<left>1576</left>
+<top>679</top>
+<width>290</width>
+<height>271</height>
+<sql_create_table>CREATE TABLE `profile_expirience` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned NOT NULL,
+  `company_id` int(10) unsigned DEFAULT NULL,
+  `university_id` int(10) unsigned DEFAULT NULL,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `title` varchar(128) DEFAULT NULL,
+  `location` varchar(160) NOT NULL,
+  `dateFrom` date NOT NULL,
+  `dateTo` date DEFAULT NULL,
+  `isCurrent` tinyint(1) NOT NULL DEFAULT '0',
+  `description` text,
+  `links` text COMMENT 'sereliaze',
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `company_id` (`company_id`),
+  KEY `university_id` (`university_id`),
+  CONSTRAINT `profile_expirience_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `profile_expirience_ibfk_2` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `profile_expirience_ibfk_3` FOREIGN KEY (`university_id`) REFERENCES `universities` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="profile_project" view="standard">
+<left>1581</left>
+<top>1169</top>
+<width>290</width>
+<height>269</height>
+<sql_create_table>CREATE TABLE `profile_project` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned NOT NULL,
+  `project_id` int(10) unsigned NOT NULL,
+  `occupation_education_id` int(10) unsigned DEFAULT NULL,
+  `occupation_experience_id` int(10) unsigned DEFAULT NULL,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `dateFrom` date NOT NULL,
+  `dateTo` date DEFAULT NULL,
+  `isCurrent` tinyint(1) NOT NULL DEFAULT '0',
+  `description` text,
+  `url` varchar(160) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `project_id` (`project_id`),
+  KEY `occupation_education_id` (`occupation_education_id`),
+  KEY `occupation_experience_id` (`occupation_experience_id`),
+  CONSTRAINT `profile_project_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `profile_project_ibfk_2` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `profile_project_ibfk_3` FOREIGN KEY (`occupation_education_id`) REFERENCES `profile_education` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `profile_project_ibfk_4` FOREIGN KEY (`occupation_experience_id`) REFERENCES `profile_expirience` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="profile_skills" view="standard">
+<left>1581</left>
+<top>1465</top>
+<width>290</width>
+<height>161</height>
+<sql_create_table>CREATE TABLE `profile_skills` (
+  `user_id` int(10) unsigned NOT NULL,
+  `skill_id` int(10) unsigned NOT NULL,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `position` int(3) NOT NULL DEFAULT '0',
+  `count` int(5) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`user_id`,`skill_id`),
+  KEY `profile_skills_ibfk_2` (`skill_id`),
+  CONSTRAINT `profile_skills_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `profile_skills_ibfk_2` FOREIGN KEY (`skill_id`) REFERENCES `skills` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="skills" view="standard">
+<left>1973</left>
+<top>1614</top>
+<width>262</width>
+<height>100</height>
+<sql_create_table>CREATE TABLE `skills` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varbinary(64) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="skills_endorsement" view="standard">
+<left>1968</left>
+<top>1463</top>
+<width>259</width>
+<height>142</height>
+<sql_create_table>CREATE TABLE `skills_endorsement` (
+  `user_id` int(10) unsigned NOT NULL,
+  `owner_id` int(10) unsigned NOT NULL,
+  `skill_id` int(10) unsigned NOT NULL,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`user_id`,`owner_id`,`skill_id`),
+  KEY `skills_endorsement_ibfk_2` (`owner_id`),
+  KEY `skills_endorsement_ibfk_3` (`skill_id`),
+  CONSTRAINT `skills_endorsement_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `skills_endorsement_ibfk_2` FOREIGN KEY (`owner_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `skills_endorsement_ibfk_3` FOREIGN KEY (`skill_id`) REFERENCES `skills` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="connections" view="standard">
+<left>660</left>
+<top>18</top>
+<width>294</width>
+<height>180</height>
+<sql_create_table>CREATE TABLE `connections` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned NOT NULL,
+  `friend_id` int(10) unsigned NOT NULL,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `description` text,
+  `typeApproved` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0 - no answer, 1 - approve, 2 - deny',
+  `message` text,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `friend_id` (`friend_id`),
+  CONSTRAINT `connections_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `connections_ibfk_2` FOREIGN KEY (`friend_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=73 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="messages" view="standard">
+<left>1285</left>
+<top>15</top>
+<width>298</width>
+<height>250</height>
+<sql_create_table>CREATE TABLE `messages` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned NOT NULL,
+  `friend_id` int(10) unsigned NOT NULL,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `typeForUser` tinyint(1) NOT NULL DEFAULT '0' COMMENT '(inbox, archived, trashed)',
+  `typeForFriend` tinyint(1) NOT NULL DEFAULT '0' COMMENT '(inbox, archived, trashed)',
+  `subject` varchar(255) DEFAULT NULL,
+  `message` text NOT NULL,
+  `isUserRemoved` tinyint(1) NOT NULL DEFAULT '0',
+  `isFriendRemoved` tinyint(1) NOT NULL DEFAULT '0',
+  `isFriendView` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `friend_id` (`friend_id`),
+  CONSTRAINT `messages_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `messages_ibfk_2` FOREIGN KEY (`friend_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=230 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="notifications" view="standard">
+<left>986</left>
+<top>16</top>
+<width>270</width>
+<height>238</height>
+<sql_create_table>CREATE TABLE `notifications` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned NOT NULL,
+  `friend_id` int(10) unsigned NOT NULL,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `type` tinyint(1) NOT NULL DEFAULT '0' COMMENT '()',
+  `notification` text,
+  `post_id` int(10) unsigned DEFAULT NULL,
+  `skill_id` int(10) DEFAULT NULL,
+  `isRemoved` tinyint(1) NOT NULL DEFAULT '0',
+  `isView` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `friend_id` (`friend_id`),
+  KEY `post_id` (`post_id`),
+  CONSTRAINT `notifications_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `notifications_ibfk_2` FOREIGN KEY (`friend_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `notifications_ibfk_4` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=125 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="tags" view="standard">
+<left>73</left>
+<top>73</top>
+<width>230</width>
+<height>129</height>
+<sql_create_table>CREATE TABLE `tags` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(64) NOT NULL,
+  `user_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  CONSTRAINT `tags_ibfk_3` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=85 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="company_specialties" view="standard">
+<left>2309</left>
+<top>825</top>
+<width>244</width>
+<height>100</height>
+<sql_create_table>CREATE TABLE `company_specialties` (
+  `company_id` int(10) unsigned NOT NULL,
+  `specialties_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`company_id`,`specialties_id`),
+  KEY `company_specialties_ibfk_2` (`specialties_id`),
+  CONSTRAINT `company_specialties_ibfk_1` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `company_specialties_ibfk_2` FOREIGN KEY (`specialties_id`) REFERENCES `specialties` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="specialties" view="standard">
+<left>2626</left>
+<top>844</top>
+<width>220</width>
+<height>100</height>
+<sql_create_table>CREATE TABLE `specialties` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(127) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="connection_tags" view="standard">
+<left>374</left>
+<top>98</top>
+<width>267</width>
+<height>100</height>
+<sql_create_table>CREATE TABLE `connection_tags` (
+  `connection_id` int(10) unsigned NOT NULL,
+  `tag_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`connection_id`,`tag_id`),
+  KEY `connection_tags_ibfk_1` (`tag_id`),
+  CONSTRAINT `connection_tags_ibfk_1` FOREIGN KEY (`tag_id`) REFERENCES `tags` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `connection_tags_ibfk_2` FOREIGN KEY (`connection_id`) REFERENCES `connections` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="company_locations" view="standard">
+<left>2310</left>
+<top>931</top>
+<width>240</width>
+<height>290</height>
+<sql_create_table>CREATE TABLE `company_locations` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `company_id` int(10) unsigned NOT NULL,
+  `descriptions` text,
+  `address1` varchar(128) DEFAULT NULL,
+  `address2` varchar(128) DEFAULT NULL,
+  `city` varchar(64) DEFAULT NULL,
+  `state` varchar(64) DEFAULT NULL,
+  `zip` varchar(24) DEFAULT NULL,
+  `country` varchar(64) DEFAULT NULL,
+  `phone1` varchar(32) DEFAULT NULL,
+  `phone2` varchar(32) DEFAULT NULL,
+  `fax` varchar(32) DEFAULT NULL,
+  `employers` tinyint(2) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `company_id` (`company_id`),
+  CONSTRAINT `company_locations_ibfk_1` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="posts" view="standard">
+<left>324</left>
+<top>1106</top>
+<width>268</width>
+<height>391</height>
+<sql_create_table>CREATE TABLE `posts` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned DEFAULT NULL,
+  `company_id` int(10) unsigned DEFAULT NULL,
+  `group_id` int(10) unsigned DEFAULT NULL,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `typePost` tinyint(1) NOT NULL DEFAULT '1',
+  `title` varchar(128) NOT NULL,
+  `text` text,
+  `link` varchar(255) DEFAULT NULL,
+  `alias` varchar(10) DEFAULT NULL,
+  `isGroupAccept` tinyint(1) DEFAULT NULL,
+  `isIncludeImage` tinyint(1) NOT NULL DEFAULT '1',
+  `countGroupFollow` tinyint(6) DEFAULT NULL,
+  `countImpressions` int(6) NOT NULL DEFAULT '0',
+  `countImpressionsUnique` int(6) NOT NULL DEFAULT '0',
+  `countClicks` int(6) NOT NULL DEFAULT '0',
+  `countInteractions` int(6) NOT NULL DEFAULT '0',
+  `countLikes` int(6) NOT NULL DEFAULT '0',
+  `countComments` int(6) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `company_id` (`company_id`),
+  KEY `group_id` (`group_id`),
+  CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `posts_ibfk_5` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `posts_ibfk_6` FOREIGN KEY (`group_id`) REFERENCES `groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=274 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="company_follow" view="standard">
+<left>2309</left>
+<top>717</top>
+<width>246</width>
+<height>107</height>
+<sql_create_table>CREATE TABLE `company_follow` (
+  `user_id` int(10) unsigned NOT NULL,
+  `company_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`user_id`,`company_id`),
+  KEY `company_follow_ibfk_2` (`company_id`),
+  CONSTRAINT `company_follow_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `company_follow_ibfk_2` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="groups" view="standard">
+<left>647</left>
+<top>1550</top>
+<width>299</width>
+<height>325</height>
+<sql_create_table>CREATE TABLE `groups` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `user_id` int(10) unsigned NOT NULL,
+  `name` varchar(127) NOT NULL,
+  `descriptionShort` text,
+  `description` text,
+  `website` varchar(127) DEFAULT NULL,
+  `ownerEmail` varchar(64) NOT NULL,
+  `accessType` tinyint(1) NOT NULL DEFAULT '1',
+  `discussionControlType` tinyint(1) NOT NULL DEFAULT '1',
+  `avaToken` varchar(16) DEFAULT NULL,
+  `coverToken` varchar(16) DEFAULT NULL,
+  `members` int(6) NOT NULL DEFAULT '0',
+  `countDiscussions` int(6) NOT NULL DEFAULT '0',
+  `isAgree` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  CONSTRAINT `groups_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="group_members" view="standard">
+<left>334</left>
+<top>1545</top>
+<width>249</width>
+<height>175</height>
+<sql_create_table>CREATE TABLE `group_members` (
+  `user_id` int(10) unsigned NOT NULL,
+  `group_id` int(10) unsigned NOT NULL,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `memberType` tinyint(1) NOT NULL DEFAULT '1',
+  `isApproved` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`user_id`,`group_id`),
+  KEY `group_members_ibfk_2` (`group_id`),
+  CONSTRAINT `group_members_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `group_members_ibfk_2` FOREIGN KEY (`group_id`) REFERENCES `groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="timeline" view="standard">
+<left>732</left>
+<top>1168</top>
+<width>280</width>
+<height>303</height>
+<sql_create_table>CREATE TABLE `timeline` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned DEFAULT NULL,
+  `company_id` int(10) unsigned DEFAULT NULL,
+  `group_id` int(10) unsigned DEFAULT NULL,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `type` int(2) NOT NULL DEFAULT '0',
+  `content` text,
+  `countLikes` int(6) NOT NULL DEFAULT '0',
+  `countShare` int(6) NOT NULL DEFAULT '0',
+  `countComments` int(6) NOT NULL DEFAULT '0',
+  `post_id` int(10) unsigned DEFAULT NULL,
+  `parent_id` int(10) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `post_id` (`post_id`),
+  KEY `parent_id` (`parent_id`),
+  KEY `company_id` (`company_id`),
+  KEY `group_id` (`group_id`),
+  CONSTRAINT `timeline_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `timeline_ibfk_3` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `timeline_ibfk_4` FOREIGN KEY (`parent_id`) REFERENCES `timeline` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `timeline_ibfk_5` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `timeline_ibfk_6` FOREIGN KEY (`group_id`) REFERENCES `groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=835 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="university_follow" view="standard">
+<left>2289</left>
+<top>13</top>
+<width>242</width>
+<height>107</height>
+<sql_create_table>CREATE TABLE `university_follow` (
+  `univercity_id` int(10) unsigned NOT NULL,
+  `user_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`user_id`,`univercity_id`),
+  KEY `university_follow_ibfk_2` (`univercity_id`),
+  CONSTRAINT `university_follow_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `university_follow_ibfk_2` FOREIGN KEY (`univercity_id`) REFERENCES `universities` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="university_admins" view="standard">
+<left>2286</left>
+<top>139</top>
+<width>242</width>
+<height>107</height>
+<sql_create_table>CREATE TABLE `university_admins` (
+  `university_id` int(10) unsigned NOT NULL,
+  `user_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`user_id`,`university_id`),
+  KEY `university_admins_ibfk_2` (`university_id`),
+  CONSTRAINT `university_admins_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `university_admins_ibfk_2` FOREIGN KEY (`university_id`) REFERENCES `universities` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="visits" view="standard">
+<left>662</left>
+<top>495</top>
+<width>289</width>
+<height>157</height>
+<sql_create_table>CREATE TABLE `visits` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned NOT NULL,
+  `profile_id` int(10) unsigned DEFAULT NULL,
+  `company_id` int(10) unsigned DEFAULT NULL,
+  `group_id` int(10) unsigned DEFAULT NULL,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `profile_id` (`profile_id`),
+  KEY `company_id` (`company_id`),
+  KEY `group_id` (`group_id`),
+  CONSTRAINT `visits_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `visits_ibfk_2` FOREIGN KEY (`profile_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `visits_ibfk_3` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `visits_ibfk_4` FOREIGN KEY (`group_id`) REFERENCES `groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=997 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="languages" view="standard">
+<left>1955</left>
+<top>482</top>
+<width>253</width>
+<height>107</height>
+<sql_create_table>CREATE TABLE `languages` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(128) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="profile_language" view="standard">
+<left>1574</left>
+<top>463</top>
+<width>290</width>
+<height>141</height>
+<sql_create_table>CREATE TABLE `profile_language` (
+  `user_id` int(10) unsigned NOT NULL,
+  `language_id` int(10) unsigned NOT NULL,
+  `levelType` int(1) NOT NULL DEFAULT '0',
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`user_id`,`language_id`),
+  KEY `profile_language_ibfk_2` (`language_id`),
+  CONSTRAINT `profile_language_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `profile_language_ibfk_2` FOREIGN KEY (`language_id`) REFERENCES `languages` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="profile_project_users" view="standard">
+<left>1965</left>
+<top>1300</top>
+<width>264</width>
+<height>107</height>
+<sql_create_table>CREATE TABLE `profile_project_users` (
+  `profile_project_id` int(10) unsigned NOT NULL,
+  `user_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`user_id`,`profile_project_id`),
+  KEY `profile_project_users_ibfk_2` (`profile_project_id`),
+  CONSTRAINT `profile_project_users_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `profile_project_users_ibfk_2` FOREIGN KEY (`profile_project_id`) REFERENCES `profile_project` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="testscores" view="standard">
+<left>1968</left>
+<top>1760</top>
+<width>265</width>
+<height>107</height>
+<sql_create_table>CREATE TABLE `testscores` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(128) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="profile_testscore" view="standard">
+<left>1585</left>
+<top>1758</top>
+<width>287</width>
+<height>226</height>
+<sql_create_table>CREATE TABLE `profile_testscore` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned NOT NULL,
+  `testscore_id` int(10) unsigned NOT NULL,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `occupation` varchar(160) NOT NULL DEFAULT '0',
+  `dateScore` date NOT NULL,
+  `score` varchar(128) NOT NULL,
+  `description` text,
+  `url` varchar(160) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `testscore_id` (`testscore_id`),
+  CONSTRAINT `profile_testscore_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `profile_testscore_ibfk_2` FOREIGN KEY (`testscore_id`) REFERENCES `testscores` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="certification_authorities" view="standard">
+<left>1964</left>
+<top>2140</top>
+<width>266</width>
+<height>107</height>
+<sql_create_table>CREATE TABLE `certification_authorities` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="profile_certification" view="standard">
+<left>1584</left>
+<top>2021</top>
+<width>289</width>
+<height>242</height>
+<sql_create_table>CREATE TABLE `profile_certification` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned NOT NULL,
+  `certification_id` int(10) unsigned NOT NULL,
+  `certification_authority_id` int(10) unsigned NOT NULL,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `number` varchar(64) NOT NULL,
+  `url` varchar(160) DEFAULT NULL,
+  `dateFrom` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `dateTo` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `isCurrent` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `certification_authority` (`certification_authority_id`),
+  KEY `user_id` (`user_id`),
+  KEY `certification_id` (`certification_id`),
+  CONSTRAINT `profile_certification_ibfk_1` FOREIGN KEY (`certification_authority_id`) REFERENCES `certification_authorities` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `profile_certification_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `profile_certification_ibfk_3` FOREIGN KEY (`certification_id`) REFERENCES `certifications` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="inviteConnections" view="standard">
+<left>660</left>
+<top>367</top>
+<width>292</width>
+<height>124</height>
+<sql_create_table>CREATE TABLE `inviteconnections` (
+  `user_id` int(10) unsigned NOT NULL,
+  `email` varchar(64) NOT NULL,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`user_id`,`email`),
+  CONSTRAINT `inviteConnections_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="timeline_comments" view="standard">
+<left>1242</left>
+<top>1196</top>
+<width>256</width>
+<height>172</height>
+<sql_create_table>CREATE TABLE `timeline_comments` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned NOT NULL,
+  `timeline_id` int(10) unsigned NOT NULL,
+  `timelineComment_id` int(10) unsigned NOT NULL,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `comment` text NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `timeline_id` (`timeline_id`),
+  CONSTRAINT `timeline_comments_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `timeline_comments_ibfk_2` FOREIGN KEY (`timeline_id`) REFERENCES `timeline` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=330 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="timeline_likes" view="standard">
+<left>1244</left>
+<top>1384</top>
+<width>258</width>
+<height>136</height>
+<sql_create_table>CREATE TABLE `timeline_likes` (
+  `user_id` int(10) unsigned NOT NULL,
+  `timeline_id` int(10) unsigned NOT NULL,
+  `parentTimeline_id` int(10) unsigned NOT NULL,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`user_id`,`timeline_id`,`parentTimeline_id`),
+  KEY `timeline_likes_ibfk_2` (`timeline_id`),
+  KEY `timeline_likes_ibfk_3` (`parentTimeline_id`),
+  CONSTRAINT `timeline_likes_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `timeline_likes_ibfk_2` FOREIGN KEY (`timeline_id`) REFERENCES `timeline` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `timeline_likes_ibfk_3` FOREIGN KEY (`parentTimeline_id`) REFERENCES `timeline` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="banners" view="standard">
+<left>659</left>
+<top>664</top>
+<width>288</width>
+<height>141</height>
+<sql_create_table>CREATE TABLE `banners` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned NOT NULL,
+  `title` varchar(128) NOT NULL,
+  `text` text NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `banners_ibfk_1` (`user_id`),
+  CONSTRAINT `banners_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="files" view="standard">
+<left>317</left>
+<top>2356</top>
+<width>257</width>
+<height>306</height>
+<sql_create_table>CREATE TABLE `files` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `sender_id` bigint(20) unsigned NOT NULL,
+  `parent_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `type` int(5) unsigned NOT NULL DEFAULT '0',
+  `name` varchar(255) NOT NULL DEFAULT '',
+  `token` varchar(16) NOT NULL DEFAULT '',
+  `size` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `ext` varchar(10) NOT NULL DEFAULT '',
+  `isImage` tinyint(1) NOT NULL DEFAULT '0',
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `cropArea` text,
+  `group` tinyint(2) DEFAULT NULL,
+  `position` int(4) NOT NULL DEFAULT '0',
+  `info` text,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `token_idxu` (`token`),
+  KEY `parent_id` (`parent_id`,`type`),
+  KEY `isImage` (`isImage`),
+  KEY `date_idx` (`date`)
+) ENGINE=InnoDB AUTO_INCREMENT=1773 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="galleries" view="standard">
+<left>957</left>
+<top>2353</top>
+<width>293</width>
+<height>260</height>
+<sql_create_table>CREATE TABLE `galleries` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `page_id` int(10) unsigned DEFAULT NULL,
+  `name` varchar(255) NOT NULL DEFAULT '',
+  `enable_watermark` tinyint(1) NOT NULL DEFAULT '0',
+  `watermark_text` varchar(45) NOT NULL,
+  `watermark_type` varchar(45) NOT NULL,
+  `paid_download` tinyint(1) NOT NULL DEFAULT '0',
+  `large_image_price` float NOT NULL DEFAULT '0',
+  `big_image_price` float NOT NULL DEFAULT '0',
+  `small_image_price` float NOT NULL DEFAULT '0',
+  `album_price` float NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `galleries_ibfk_1` (`page_id`),
+  CONSTRAINT `galleries_ibfk_1` FOREIGN KEY (`page_id`) REFERENCES `pages` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=77 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="galleries_items" view="standard">
+<left>635</left>
+<top>2620</top>
+<width>251</width>
+<height>124</height>
+<sql_create_table>CREATE TABLE `galleries_items` (
+  `gallery_id` bigint(20) unsigned NOT NULL,
+  `file_id` bigint(20) unsigned NOT NULL,
+  `position` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`gallery_id`,`file_id`),
+  KEY `galleries_items_ibfk_2` (`file_id`),
+  CONSTRAINT `galleries_items_ibfk_1` FOREIGN KEY (`gallery_id`) REFERENCES `galleries` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `galleries_items_ibfk_2` FOREIGN KEY (`file_id`) REFERENCES `files` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="pages" view="standard">
+<left>633</left>
+<top>2351</top>
+<width>256</width>
+<height>243</height>
+<sql_create_table>CREATE TABLE `pages` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updateDate` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `category` varchar(64) NOT NULL,
+  `alias` varchar(256) NOT NULL,
+  `title` varchar(250) NOT NULL,
+  `text` text NOT NULL,
+  `config` text,
+  `isPublic` tinyint(1) NOT NULL DEFAULT '1',
+  `isRemoved` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="galleries_items_info" view="standard">
+<left>33</left>
+<top>2357</top>
+<width>247</width>
+<height>141</height>
+<sql_create_table>CREATE TABLE `galleries_items_info` (
+  `file_id` bigint(20) unsigned NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `text` text,
+  `alternative` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`file_id`),
+  CONSTRAINT `galleries_items_info_ibfk_1` FOREIGN KEY (`file_id`) REFERENCES `files` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="certifications" view="standard">
+<left>1965</left>
+<top>2018</top>
+<width>270</width>
+<height>107</height>
+<sql_create_table>CREATE TABLE `certifications` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(128) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="connection_ban" view="standard">
+<left>659</left>
+<top>211</top>
+<width>290</width>
+<height>141</height>
+<sql_create_table>CREATE TABLE `connection_ban` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned NOT NULL,
+  `friend_id` int(10) unsigned NOT NULL,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `friend_id` (`friend_id`),
+  CONSTRAINT `connection_ban_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `connection_ban_ibfk_2` FOREIGN KEY (`friend_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="connection_search_result" view="standard">
+<left>373</left>
+<top>218</top>
+<width>266</width>
+<height>141</height>
+<sql_create_table>CREATE TABLE `connection_search_result` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `profile_id` int(10) unsigned NOT NULL,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `profile_id` (`profile_id`),
+  CONSTRAINT `connection_search_result_ibfk_2` FOREIGN KEY (`profile_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=711 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="timeline_shares" view="standard">
+<left>1244</left>
+<top>1545</top>
+<width>258</width>
+<height>119</height>
+<sql_create_table>CREATE TABLE `timeline_shares` (
+  `user_id` int(10) unsigned NOT NULL,
+  `timeline_id` int(10) unsigned NOT NULL,
+  `parentTimeline_id` int(10) unsigned NOT NULL,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`user_id`,`timeline_id`,`parentTimeline_id`),
+  KEY `timeline_shares_ibfk_2` (`timeline_id`),
+  KEY `timeline_shares_ibfk_3` (`parentTimeline_id`),
+  CONSTRAINT `timeline_shares_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `timeline_shares_ibfk_2` FOREIGN KEY (`timeline_id`) REFERENCES `timeline` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `timeline_shares_ibfk_3` FOREIGN KEY (`parentTimeline_id`) REFERENCES `timeline` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="company_post_comments" view="standard">
+<left>20</left>
+<top>1124</top>
+<width>239</width>
+<height>175</height>
+<sql_create_table>CREATE TABLE `company_post_comments` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned NOT NULL,
+  `post_id` int(10) unsigned NOT NULL,
+  `company_id` int(10) unsigned NOT NULL,
+  `comment_id` int(10) unsigned NOT NULL,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `post_id` (`post_id`),
+  KEY `company_id` (`company_id`),
+  KEY `comment_id` (`comment_id`),
+  CONSTRAINT `company_post_comments_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `company_post_comments_ibfk_2` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `company_post_comments_ibfk_3` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `company_post_comments_ibfk_4` FOREIGN KEY (`comment_id`) REFERENCES `timeline_comments` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=83 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="company_post_likes" view="standard">
+<left>19</left>
+<top>1313</top>
+<width>238</width>
+<height>158</height>
+<sql_create_table>CREATE TABLE `company_post_likes` (
+  `user_id` int(10) unsigned NOT NULL,
+  `post_id` int(10) unsigned NOT NULL,
+  `company_id` int(10) unsigned NOT NULL,
+  `timeline_id` int(10) unsigned NOT NULL,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`user_id`,`post_id`,`company_id`,`timeline_id`),
+  KEY `company_post_likes_ibfk_2` (`post_id`),
+  KEY `company_post_likes_ibfk_3` (`company_id`),
+  KEY `company_post_likes_ibfk_4` (`timeline_id`),
+  CONSTRAINT `company_post_likes_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `company_post_likes_ibfk_2` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `company_post_likes_ibfk_3` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `company_post_likes_ibfk_4` FOREIGN KEY (`timeline_id`) REFERENCES `timeline` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="company_post_clicks" view="standard">
+<left>21</left>
+<top>968</top>
+<width>238</width>
+<height>141</height>
+<sql_create_table>CREATE TABLE `company_post_clicks` (
+  `user_id` int(10) unsigned NOT NULL,
+  `post_id` int(10) unsigned NOT NULL,
+  `company_id` int(10) unsigned NOT NULL,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`user_id`,`post_id`,`company_id`),
+  KEY `company_post_clicks_ibfk_2` (`post_id`),
+  KEY `company_post_clicks_ibfk_3` (`company_id`),
+  CONSTRAINT `company_post_clicks_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `company_post_clicks_ibfk_2` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `company_post_clicks_ibfk_3` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="company_post_impressions" view="standard">
+<left>19</left>
+<top>792</top>
+<width>238</width>
+<height>158</height>
+<sql_create_table>CREATE TABLE `company_post_impressions` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned NOT NULL,
+  `post_id` int(10) unsigned NOT NULL,
+  `company_id` int(10) unsigned NOT NULL,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `post_id` (`post_id`),
+  KEY `company_id` (`company_id`),
+  CONSTRAINT `company_post_impressions_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `company_post_impressions_ibfk_2` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `company_post_impressions_ibfk_3` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=1359 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="group_discussion_follow" view="standard">
+<left>335</left>
+<top>1733</top>
+<width>252</width>
+<height>141</height>
+<sql_create_table>CREATE TABLE `group_discussion_follow` (
+  `post_id` int(10) unsigned NOT NULL,
+  `group_id` int(10) unsigned NOT NULL,
+  `user_id` int(10) unsigned NOT NULL,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`post_id`,`group_id`,`user_id`),
+  KEY `group_discussion_follow_ibfk_2` (`group_id`),
+  KEY `group_discussion_follow_ibfk_3` (`user_id`),
+  CONSTRAINT `group_discussion_follow_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `group_discussion_follow_ibfk_2` FOREIGN KEY (`group_id`) REFERENCES `groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `group_discussion_follow_ibfk_3` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="jobs" view="standard">
+<left>2308</left>
+<top>312</top>
+<width>273</width>
+<height>396</height>
+<sql_create_table>CREATE TABLE `jobs` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned NOT NULL,
+  `company_id` int(10) unsigned NOT NULL,
+  `plan_id` int(10) unsigned NOT NULL DEFAULT '1',
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `industry` int(3) NOT NULL,
+  `country` varchar(2) NOT NULL,
+  `state` varchar(64) NOT NULL,
+  `city` varchar(128) NOT NULL,
+  `title` varchar(128) NOT NULL,
+  `description` text NOT NULL,
+  `requiredSkills` text NOT NULL,
+  `about` text NOT NULL,
+  `employment` int(1) NOT NULL,
+  `receivedType` int(1) NOT NULL DEFAULT '1',
+  `receivedEmail` varchar(64) DEFAULT NULL,
+  `expiredDate` datetime NOT NULL,
+  `countApplicants` int(6) NOT NULL DEFAULT '0',
+  `countNewApplicants` int(6) NOT NULL DEFAULT '0',
+  `isRemoved` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `jobs_ibfk_1` (`user_id`),
+  KEY `jobs_ibfk_2` (`company_id`),
+  KEY `jobs_ibfk_3` (`plan_id`),
+  CONSTRAINT `jobs_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `jobs_ibfk_2` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `jobs_ibfk_3` FOREIGN KEY (`plan_id`) REFERENCES `plans` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="cart_items" view="standard">
+<left>2739</left>
+<top>260</top>
+<width>249</width>
+<height>277</height>
+<sql_create_table>CREATE TABLE `cart_items` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `order_id` int(10) unsigned DEFAULT NULL,
+  `user_id` int(10) unsigned NOT NULL,
+  `job_id` int(10) unsigned NOT NULL,
+  `plan_id` int(10) unsigned NOT NULL,
+  `itemName` varchar(64) NOT NULL,
+  `note` varchar(64) DEFAULT NULL,
+  `source` varchar(64) DEFAULT 'directory',
+  `section` varchar(64) DEFAULT NULL,
+  `quantity` int(11) NOT NULL,
+  `price` decimal(15,2) DEFAULT NULL,
+  `details` text,
+  PRIMARY KEY (`id`),
+  KEY `cart_items_ibfk_1` (`order_id`),
+  KEY `cart_items_ibfk_2` (`user_id`),
+  KEY `cart_items_ibfk_3` (`job_id`),
+  KEY `cart_items_ibfk_4` (`plan_id`),
+  CONSTRAINT `cart_items_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `cart_orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `cart_items_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `cart_items_ibfk_3` FOREIGN KEY (`job_id`) REFERENCES `jobs` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `cart_items_ibfk_4` FOREIGN KEY (`plan_id`) REFERENCES `plans` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="cart_orders" view="standard">
+<left>3049</left>
+<top>404</top>
+<width>310</width>
+<height>622</height>
+<sql_create_table>CREATE TABLE `cart_orders` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned NOT NULL,
+  `amount` decimal(15,2) DEFAULT NULL,
+  `delivery` text,
+  `deliveryCost` float DEFAULT NULL,
+  `discount` varchar(15) DEFAULT NULL,
+  `processed` tinyint(3) DEFAULT NULL,
+  `isPaid` tinyint(4) NOT NULL DEFAULT '0',
+  `dateTimeAdded` datetime DEFAULT NULL,
+  `dateTimePaid` datetime DEFAULT NULL,
+  `token` varchar(6) NOT NULL,
+  `sessionId` varchar(64) NOT NULL,
+  `transactionId` varchar(64) NOT NULL,
+  `customer` varchar(128) DEFAULT NULL,
+  `email` varchar(64) DEFAULT NULL,
+  `state` varchar(2) DEFAULT NULL,
+  `zip` varchar(5) DEFAULT NULL,
+  `city` varchar(128) DEFAULT NULL,
+  `address` varchar(128) DEFAULT NULL,
+  `phone` varchar(64) DEFAULT NULL,
+  `comment` text,
+  `paypalLink` text,
+  `paypalRecurringStatus` varchar(64) DEFAULT NULL,
+  `paypalRecurringProfileId` varchar(64) DEFAULT NULL,
+  `paypalMethod` varchar(64) DEFAULT NULL,
+  `paypalToken` varchar(64) DEFAULT NULL,
+  `paypalEmail` varchar(64) DEFAULT NULL,
+  `paypalAck` varchar(64) DEFAULT NULL,
+  `paypalMessage` text,
+  `paypalInfo` text,
+  `paypalCorrelationId` varchar(64) DEFAULT NULL,
+  `paypalTimestamp` varchar(64) DEFAULT NULL,
+  `position` int(10) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `cart_orders_ibfk_1` (`user_id`),
+  CONSTRAINT `cart_orders_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="plans" view="standard">
+<left>3050</left>
+<top>220</top>
+<width>313</width>
+<height>170</height>
+<sql_create_table>CREATE TABLE `plans` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `name` varchar(255) NOT NULL,
+  `price` decimal(15,2) NOT NULL DEFAULT '0.00',
+  `countDays` int(6) NOT NULL DEFAULT '1',
+  `isRemoved` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+</tables>
+</canvas>
+</schemadesigner>

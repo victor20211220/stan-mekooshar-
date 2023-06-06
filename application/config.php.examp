@@ -1,0 +1,676 @@
+<?php
+
+/**
+ * Kit.
+ *
+ * Application configuration.
+ *
+ * @version $Id: config.php 82 2010-07-11 10:38:08Z eprev $
+ * @package Application
+ */
+/**
+ * @var boolean  Output compression.
+ */
+$gzipOutput = false;
+
+/**
+ * @var boolean  Whether the debug mode is enabled?
+ */
+$debugEnabled = true;
+
+$allowDump2 = array(
+	''
+);
+
+/**
+ * @var string Host protocol 'http' or 'https'
+ */
+$protocol = 'https';
+
+/**
+ * @var array Host name.
+ */
+    $host = 'mekooshar.loc';
+
+$devEmail = '';
+
+/**
+ * @var array  Database profiles.
+ */
+$database = array(
+	'default' => array(
+		'driver' => 'mysql',
+		'host'     => 'localhost',
+		'username' => 'root',
+		'password' => 'root',
+		'name'     => 'mekooshar',
+	)
+);
+
+/**
+ * @var array  SMTP profiles.
+ */
+$smtp = array(
+	'default' => array(
+		//'host'    => 'smtp.godaddy.com',
+		//'auth'    => true,
+		//'login'   => 'mail@ukietech.com',
+		//'password'=> '12345678',
+		//'port'    => 587,
+		'auth' => false,
+		'host' => 'localhost',
+		'port' => 25,
+		'timeout' => 5,
+		'from' => 'Mekooshar <system@ukietech.com>',
+		'log' => 'default'
+	)
+);
+
+$socials = array(
+    'facebook' => array(
+        'app_id' => '264660184841747',
+        'app_secret' => 'cce62ae993fdd45dd4421ed046397ba7',
+        'invite' => array(
+            'callback' => 'https://mekooshar.loc/invite/facebook',
+            'maxresults' => 1000,
+            'successredirect' => '/invite/'
+        ),
+        'auth' => array(
+            'callback' => 'https://mekooshar.loc/socials/facebook',
+            'successredirect' => '/registration/',
+            'errorredirect' => '/'
+        ),
+        'login' => array(
+            'callback' => 'https://mekooshar.loc/socials/facebookLogin',
+            'authfacebook' => '/socials/authfacebook/',
+            'successredirect' => '/profile/',
+            'errorredirect' => '/'
+        )
+    ),
+);
+
+/**
+ * @var int items on page
+ */
+$itemsOnPage = 2;
+
+/**
+ * @var array  Log profiles.
+ */
+$log = array(
+	'default' => array(
+		'enabled' => true,
+		'filename' => APPLICATION_PATH . '_log/debug.log'
+	),
+	'mailer' => array(
+		'enabled' => true,
+		'filename' => APPLICATION_PATH . '_log/mailer.log'
+	),
+);
+
+/**
+ * @var array Items on page
+ */
+$iop = array(
+	'default' => array(
+		'users' => 20,
+	),
+);
+
+$acl = array(
+	/**
+	 * The ACL roles:
+	 *    role => parent(s)
+	 *
+	 * Role "guest" is predefined.
+	 */
+	'roles' => array(
+		'user' => null,
+		'admin' => null,
+		'root' => null,
+	),
+	/**
+	 * Roles titles:
+	 *    role => title
+	 *
+	 */
+	'titles' => array(
+		'user' => 'User',
+		'admin' => 'Administrator',
+		'root' => 'Super admin',
+	),
+	/**
+	 * The ACL resources:
+	 *    resource => parent
+	 */
+	'resources' => array(
+		'public' => null,
+		'dashboard' => null,
+		'super' => null,
+		'profile' => null
+	),
+	/**
+	 * The ACL allow rules:
+	 *    array(role(s), resourece(s), privilege(s))
+	 */
+	'allow' => array(
+		array('*', 'public'),
+		array('admin', array('dashboard', 'profile')),
+		array('root', array('super', 'dashboard', 'profile')),
+		array('user', array('profile'))
+	),
+	/**
+	 * The ACL deny rules:
+	 *    array(role(s), resourece(s), privilege(s))
+	 */
+	'deny' => array(
+	)
+);
+
+/**
+ * @var array List of system URIs.
+ */
+$uri = array(
+	'login' => '/',
+	'logout' => '/logout/',
+	'forgotPassword' => '/forgot-password/',
+	'register' => '/register/'
+);
+
+/**
+ * @var array Host name.
+ */
+$modules = array(
+	'directory' => array(
+		'enabled' => true,
+		'autoload' => true
+	),
+	'pages' => array(
+		'enabled' => true,
+		'autoload' => true
+	),
+	'users' => array(
+		'enabled' => true,
+		'autoload' => true
+	),
+	'cart' => array(
+		'enabled' => true,
+		'autoload' => true
+	),
+	'maillist' => array(
+		'enabled' => true,
+		'autoload' => true
+	),
+	'socials' => array(
+		'enabled' => true,
+		'autoload' => true
+	),
+	'thumbshot' => array(
+		'enabled' => true,
+		'autoload' => true
+	),
+	'shop' => array(
+		'enabled' => true,
+		'autoload' => true
+	),
+	'statistic' => array(
+		'enabled' => true,
+		'autoload' => true
+	)
+);
+
+
+/**
+ * @var double default max file size to upload.
+ */
+$maxFileSize = 5242880;
+
+/**
+ * @var array default allow file extension to upload.
+ */
+$extension = array(
+	'images' => array('jpg', 'jpeg', 'png', 'gif'),
+	'attachments' => array('doc', 'xls', 'pdf'),
+	'audios' => array('mp3')
+);
+
+/**
+ * @var array limits for visitors.
+ */
+$visitorsChecker = array(
+	'limits' => array(
+		'maxHourVisits' => 5000,
+		'maxBadUrlVisits' => 500,
+		'maxReportSent' => 100
+	)
+);
+
+
+// FOR UPLOADER (modules PAGES)
+// =====================================================================================================================
+/**
+ * @var array  file types.
+ */
+$fileTypes = array(
+	FILE_PAGES 			=> 'pageImages',
+	FILE_UPDATES		=> 'updates',
+	FILE_USER_AVA		=> 'ava',
+	FILE_COMPANY_AVA	=> 'companyAva',
+	FILE_COMPANY_COVER	=> 'companyCover',
+	FILE_GROUP_EMBLEM	=> 'groupEmblem',
+	FILE_GROUP_COVER	=> 'groupCover',
+	FILE_JOB_APPLY		=> 'jobApply',
+	FILE_SCHOOL_AVA		=> 'schoolAva',
+	FILE_SCHOOL_COVER	=> 'schoolCover',
+	FILE_BANNER			=> 'banners'
+);
+
+
+/**
+ * @var array  file store path.
+ */
+$store = array(
+	'temp'			=> 'content/_temp',
+	'pageImages'	=> 'content/images',
+	'photos'		=> 'content/photos',
+	'video'			=> 'content/video',
+	'audio'			=> 'content/audio',
+	'updates'		=> 'content/updates',
+	'ava'			=> 'content/ava',
+	'companyAva'	=> 'content/company_ava',
+	'companyCover'	=> 'content/company_cover',
+	'groupEmblem'	=> 'content/group_emblem',
+	'groupCover'	=> 'content/group_cover',
+	'jobApply'		=> 'content/job_apply',
+	'schoolAva'		=> 'content/school_ava',
+	'schoolCover'	=> 'content/school_cover',
+	'banners'		=> 'content/banners'
+);
+
+
+/**
+ * @var array image thumbs creation condition.
+ */
+$imageThumbs = array(
+	'pageImages' => array(
+		'tiny' => array(
+			'width'  => 100,
+			'height' => 100,
+			'method' => 'crop',
+			'format' => 'jpg'
+		),
+		'preview' => array(
+			'width'   => 796,
+			'height'  => 268,
+			'method'  => 'crop',
+			'format'  => 'jpg',
+			'enlarge' => true
+		),
+		'preview_adv' => array(
+			'width'   => 900,
+			'method'  => 'scale',
+			'format'  => 'jpg',
+			'enlarge' => true
+		),
+		'gallery' => array(
+			'width'   => 640,
+			'height'  => 480,
+			'method'  => 'crop',
+			'format'  => 'jpg',
+			'enlarge' => true
+		),
+		'aboutus' => array(
+			'width'   => 226,
+			'height'  => 226,
+			'method'  => 'crop',
+			'format'  => 'jpg',
+			'enlarge' => true
+		),
+		'advertise' => array(
+			'width'   => 240,
+			'height'  => 226,
+			'method'  => 'crop',
+			'format'  => 'jpg',
+			'enlarge' => true
+		),
+		'fullhd' => array(
+			'width'   => 1920,
+			'height'  => 1020,
+			'method'  => 'crop',
+			'format'  => 'jpg',
+			'enlarge' => true
+		),
+	),
+	'updates' => array(
+		'userava_44' => array(
+			'width'  => 44,
+			'height' => 44,
+			'method' => 'crop',
+			'format' => 'jpg'
+		),
+		'userava_200' => array(
+			'width'  => 200,
+			'height' => 200,
+			'method' => 'crop',
+			'format' => 'jpg'
+		),
+		'tiny' => array(
+			'width'  => 100,
+			'height' => 100,
+			'method' => 'crop',
+			'format' => 'jpg'
+		),
+		'preview' => array(
+			'width'   => 900,
+			'height'  => 600,
+			'method'  => 'scale',
+			'format'  => 'jpg',
+			'enlarge' => true
+		),
+	),
+	'ava' => array(
+		'userava_174' => array(
+			'width'  => 174,
+			'height' => 174,
+			'method' => 'crop',
+			'format' => 'jpg'
+		),
+		'userava_94' => array(
+			'width'  => 94,
+			'height' => 94,
+			'method' => 'crop',
+			'format' => 'jpg'
+		),
+		'userava_52' => array(
+			'width'  => 52,
+			'height' => 52,
+			'method' => 'crop',
+			'format' => 'jpg'
+		),
+		'userava_44' => array(
+			'width'  => 44,
+			'height' => 44,
+			'method' => 'crop',
+			'format' => 'jpg'
+		),
+		'preview' => array(
+			'width'   => 900,
+			'height'  => 600,
+			'method'  => 'scale',
+			'format'  => 'jpg',
+			'enlarge' => true
+		),
+	),
+	'companyAva' => array(
+		'userava_174' => array(
+			'width'  => 174,
+			'height' => 174,
+			'method' => 'crop',
+			'format' => 'jpg'
+		),
+		'userava_100' => array(
+			'width'  => 100,
+			'height' => 100,
+			'method' => 'crop',
+			'format' => 'jpg'
+		),
+		'userava_94' => array(
+			'width'  => 94,
+			'height' => 94,
+			'method' => 'crop',
+			'format' => 'jpg'
+		),
+		'userava_52' => array(
+			'width'  => 52,
+			'height' => 52,
+			'method' => 'crop',
+			'format' => 'jpg'
+		),
+		'userava_44' => array(
+			'width'  => 44,
+			'height' => 44,
+			'method' => 'crop',
+			'format' => 'jpg'
+		),
+	),
+	'companyCover' => array(
+		'cover_580' => array(
+			'width'  => 580,
+			'height' => 245,
+			'method' => 'crop',
+			'format' => 'jpg'
+		),
+		'cover_500' => array(
+			'width'  => 500,
+			'height' => 211,
+			'method' => 'crop',
+			'format' => 'jpg'
+		)
+	),
+	'groupEmblem' => array(
+		'userava_174' => array(
+			'width'  => 174,
+			'height' => 174,
+			'method' => 'crop',
+			'format' => 'jpg'
+		),
+		'userava_100' => array(
+			'width'  => 100,
+			'height' => 100,
+			'method' => 'crop',
+			'format' => 'jpg'
+		),
+		'userava_94' => array(
+			'width'  => 94,
+			'height' => 94,
+			'method' => 'crop',
+			'format' => 'jpg'
+		),
+		'userava_52' => array(
+			'width'  => 52,
+			'height' => 52,
+			'method' => 'crop',
+			'format' => 'jpg'
+		),
+		'userava_44' => array(
+			'width'  => 44,
+			'height' => 44,
+			'method' => 'crop',
+			'format' => 'jpg'
+		),
+	),
+	'groupCover' => array(
+		'cover_580' => array(
+			'width'  => 580,
+			'height' => 245,
+			'method' => 'crop',
+			'format' => 'jpg'
+		)
+	),
+	'jobApply' => array(),
+	'schoolAva' => array(
+		'userava_174' => array(
+			'width'  => 174,
+			'height' => 174,
+			'method' => 'crop',
+			'format' => 'jpg'
+		),
+		'userava_100' => array(
+			'width'  => 100,
+			'height' => 100,
+			'method' => 'crop',
+			'format' => 'jpg'
+		),
+		'userava_94' => array(
+			'width'  => 94,
+			'height' => 94,
+			'method' => 'crop',
+			'format' => 'jpg'
+		),
+		'userava_52' => array(
+			'width'  => 52,
+			'height' => 52,
+			'method' => 'crop',
+			'format' => 'jpg'
+		),
+		'userava_44' => array(
+			'width'  => 44,
+			'height' => 44,
+			'method' => 'crop',
+			'format' => 'jpg'
+		),
+	),
+	'schoolCover' => array(
+		'cover_580' => array(
+			'width'  => 580,
+			'height' => 245,
+			'method' => 'crop',
+			'format' => 'jpg'
+		),
+		'cover_500' => array(
+			'width'  => 500,
+			'height' => 211,
+			'method' => 'crop',
+			'format' => 'jpg'
+		)
+	),
+	'banners' => array(
+		'size_580' => array(
+			'width'  => 580,
+			'height' => 90,
+			'method' => 'crop',
+			'format' => 'jpg'
+		),
+		'size_330' => array(
+			'width'  => 330,
+			'height' => 80,
+			'method' => 'crop',
+			'format' => 'jpg'
+		)
+	),
+);
+
+
+
+/**
+ * @var array file upload conditions.
+ */
+$fileCondition = array(
+	'pageImages' => array(
+		'onlyImgs' => true,
+		'maxSize'  => 10971520
+	),
+	'updates' => array(
+//		'onlyImgs' => true,
+		'maxSize'  => 5242880,
+		'fileExt' => array('doc', 'docx', 'pdf', 'jpeg', 'jpg', 'png'),
+		'multiple' => false
+	),
+	'ava' => array(
+		'onlyImgs' => true,
+		'maxSize'  => 10971520,
+		'multiple' => false
+	),
+	'companyAva' => array(
+		'onlyImgs' => true,
+		'maxSize'  => 10971520,
+		'multiple' => false
+	),
+	'companyCover' => array(
+		'onlyImgs' => true,
+		'maxSize'  => 10971520,
+		'multiple' => false
+	),
+	'groupEmblem' => array(
+		'onlyImgs' => true,
+		'maxSize'  => 10971520,
+		'multiple' => false
+	),
+	'groupCover' => array(
+		'onlyImgs' => true,
+		'maxSize'  => 10971520,
+		'multiple' => false
+	),
+	'jobApply' => array(
+		'maxSize'  => 5242880,
+		'fileExt' => array('doc', 'docx', 'pdf', 'jpeg', 'jpg', 'png'),
+		'multiple' => false
+	),
+	'schoolAva' => array(
+		'onlyImgs' => true,
+		'maxSize'  => 10971520,
+		'multiple' => false
+	),
+	'schoolCover' => array(
+		'onlyImgs' => true,
+		'maxSize'  => 10971520,
+		'multiple' => false
+	),
+	'banners' => array(
+		'onlyImgs' => true,
+		'maxSize'  => 10971520,
+		'multiple' => false
+	),
+//	'cubeAva' => array(
+//		'onlyImgs' => true,
+//		'maxSize'  => 10971520
+//	),
+//	'cubeInfo' => array(
+//		'onlyImgs' => true,
+//		'maxSize'  => 10971520,
+//		'multiple' => true
+//	)
+);
+
+/**
+ * @var array common file upload conditions.
+ */
+$files = array(
+	'allowed' => array(
+		'imgExt' => array('jpeg', 'jpg', 'png'),
+		'fileExt' => array('doc', 'docx', 'pdf', 'zip', 'rar', 'txt', 'mp3', 'ogg'),
+		'maxSize' => 2009715200
+	)
+);
+
+$pageACL = array(
+	'gallery' => array(
+		'add' => false,
+		'edit' => true,
+		'delete' => false
+	),
+	'static' => array(
+		'add' => true,
+		'edit' => true,
+		'delete' => false
+	),
+	'banners' => array(
+		'add' => true,
+		'edit' => true,
+		'delete' => true,
+	    'customField' => array(
+		    array(
+			    'type' => FIELD_CHECKBOXES,
+		        'name' => 'region',
+		        'title' => 'Regions',
+		        'value' => t('countries')
+		    ),
+	        array(
+		        'type' => FIELD_FILE_ONE,
+		        'name' => 'file_banner',
+		        'title' => 'Banner',
+		        'value' => ''
+	        )
+	    )
+	),
+);
+
+
+// Local config
+// =====================================================================================================================
+/**
+ * Local config
+ */
+if(is_file(APPLICATION_PATH . 'config_loc.php')) {
+	require_once APPLICATION_PATH . 'config_loc.php';
+}

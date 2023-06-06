@@ -1,0 +1,51 @@
+# Kit.
+#
+# $Id: .htaccess 6 2009-10-28 00:08:35Z eprev $
+#
+
+# Basic authentication.
+#
+#AuthName "Have any ideas?"
+#AuthType Basic
+#AuthUserFile /var/www/tools/.htpasswd
+#Require valid-user
+
+Options -Indexes
+
+RewriteEngine On
+RewriteBase /
+
+# Force `www`.
+#
+#RewriteCond %{HTTP_HOST} ^example\.com [NC]
+#RewriteRule (.*) http://www.example.com/$1 [R=301,L]
+
+# Rest controllers.
+
+RewriteRule ^confirm/(.*)$			index.php/auth/confirm/$1 [L]
+RewriteRule ^register/(.*)$			index.php/auth/register/$1 [L]
+RewriteRule ^login/(.*)$			index.php/auth/login/$1 [L]
+RewriteRule ^logout/(.*)$			index.php/auth/logout/ [L]
+RewriteRule ^forgot-password/(.*)$		index.php/auth/resetPassword/$1 [L]
+
+# Trailing slash.
+#
+RewriteCond %{REQUEST_FILENAME} !(\.ico|\.png)$
+RewriteCond $0 !^(index\.php|content|resources|robots\.txt|browserconfig.xml)
+RewriteRule ^.*[^/]$ $0/ [R=301,L]
+
+# Redirect to index.php
+#
+RewriteCond %{REQUEST_FILENAME} !(\.ico|\.png)$
+RewriteCond $1 !^(index\.php|content|resources|robots\.txt|browserconfig.xml)
+RewriteRule ^(.*)$ /index.php/$1 [L]
+
+addDefaultCharset utf-8
+
+php_value session.name    SID
+php_value error_reporting 32767
+php_flag  display_errors  On
+php_flag  short_open_tag  On
+php_value upload_max_filesize 50M
+php_value post_max_size 50M
+php_value session.gc_probability 0

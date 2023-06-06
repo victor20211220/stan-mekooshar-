@@ -1,0 +1,211 @@
+/* $Id*/
+
+/**
+ * Additional fieldset and form classes:
+ *   no-stripes    Do not draw separators between elements
+ *   labels-right  Align labels to the right edge
+ */
+
+.autoform fieldset {
+	margin: 1em 0;
+	padding: .3em .6em;
+}
+.autoform fieldset:first-child {
+	margin-top: 0;
+}
+.autoform fieldset:last-child {
+	margin-bottom: 0;
+}
+
+.autoform fieldset > legend {
+	color: #666;
+	padding: .3em;
+	margin: 0;
+}
+
+.autoform fieldset > ol > li > .autoform-label {
+	float: left;
+	width: 120px;
+	padding-top: 2px;
+}
+.autoform fieldset .autoform-label label {
+	line-height: 1.4em;
+	vertical-align: top;
+	white-space: normal;
+}
+
+.autoform fieldset > ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.autoform fieldset > ol > li {
+	border-top: 1px dotted #ccc;
+	margin: 0;
+	padding: .5em 0;
+	overflow: hidden;
+/*	white-space: nowrap;*/
+}
+
+.autoform fieldset ol > li:first-child,
+.autoform fieldset ol > li.autoform-grouped,
+.autoform.no-stripes fieldset > ol > li,
+.autoform fieldset.no-stripes ol > li {
+	border-top-style: none;
+}
+.autoform-element {
+	display: block;
+	margin-left: 120px;
+}
+.autoform-element-inner {
+	display: -moz-inline-stack; /* FF2 inline-block */
+	display: inline-block;
+	vertical-align: top;
+	/* IE7 inline-block */
+	zoom: 1;
+	*display: inline;
+}
+
+
+.autoform fieldset > ol > li input[type=checkbox] {
+	vertical-align: baseline;
+	margin-top: 4px;
+}
+
+.autoform fieldset > ol > li input[type=checkbox] + label {
+	user-select: none; -moz-user-select: none; -o-user-select: none; -webkit-user-select: none;
+	padding-top: 2px;
+	display: inline-block;
+	/* IE7 inline-block */
+	zoom: 1;
+	*display: inline;
+	
+}
+
+.autoform fieldset .autoform-label em {
+	color: #e33;
+	font-style: normal;
+}
+
+.autoform fieldset .autoform-label sup {
+	cursor: help;
+	font-size: 0.9em;
+	color: #999;
+}
+
+.autoform.labels-right fieldset .autoform-label,
+.autoform fieldset.labels-right .autoform-label {
+	text-align: right;
+}
+.autoform.labels-right fieldset .autoform-label label,
+.autoform fieldset.labels-right .autoform-label label {
+	padding-right: .5em;
+}
+
+.autoform-content-left,
+.autoform-content-top,
+.autoform-content-right,
+.autoform-content-bottom {
+	color: #999;
+	font-size: .8em;
+	line-height: 1.4em;
+}
+.autoform-content-top,
+.autoform-content-bottom {
+	text-align: center;
+}
+.autoform-content-left,
+.autoform-content-right {
+	display: inline;
+}
+.autoform-content-bottom {
+	clear: both;
+}
+
+.autoform-element-errors {
+	display: block;
+	font-size: .9em;
+	list-style: none inside;
+	margin: 0;
+	padding: 0;
+	white-space: normal;
+}
+
+.autoform-errors {
+	font-size: .9em;
+	list-style: none inside;
+	padding: .25em .25em .25em .75em;
+	margin: 0 0 .5em;
+}
+.autoform-element-errors li,
+.autoform-errors li {
+	margin: 0;
+	padding: 3px 0 0;
+}
+.autoform-element-errors li {
+	*padding-right: 0 !important; /* IE-7 hack */
+}
+.autoform-errors {
+	background-color: #ffebe8;
+	border: 1px solid #dd3c10;
+}
+.autoform-element-errors > li > label:hover,
+.autoform-errors > li > label:hover {
+	border-bottom: 1px dotted #dd3c10;
+	padding-bottom: -1px;
+}
+.autoform-element-errors li,
+.autoform-errors li {
+	color: #dd3c10;
+}
+.autoform-element-errors:first-child,
+.autoform-errors:first-child {
+	margin-top: 0;
+}
+.autoform-element-errors li:before,
+.autoform-errors li:before {
+	content: '\2043';
+	margin-left: -1ex;
+	margin-right: 1ex;
+}
+.autoform-element-errors li:after,
+.autoform-errors li:after {
+	content: ';'
+}
+.autoform-element-errors li:last-child:after,
+.autoform-errors li:last-child:after {
+	content: '.'
+}
+.autoform-element-errors li label,
+.autoform-errors li label {
+	cursor: pointer;
+}
+
+/* Batch mode */
+
+.autoform table {
+	border-spacing: 0;
+}
+.autoform table td,
+.autoform table th {
+	padding: .2em .4em;
+	vertical-align: top;
+}
+.autoform table th {
+	font-size: 1em;
+	font-weight: bold;
+	text-align: left;
+}
+.autoform table th em {
+	color: #e33;
+	font-style: normal;
+}
+.autoform table th sup {
+	cursor: help;
+}
+
+/* Local Variables:    */
+/* tab-width: 4	       */
+/* indent-tabs-mode: t */
+/* End:                */

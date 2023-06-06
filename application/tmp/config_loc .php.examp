@@ -1,0 +1,65 @@
+<?php
+
+$database = array(
+	'default' => array(
+		'driver' => 'mysql',
+		'host'     => 'localhost',
+        'username' => 'developer',
+        'password' => '33rawno7',
+		'name'     => 'mekooshar',
+	)
+);
+
+$socials = array(
+	'google' => array(
+		'clientid' => '980067487964-dd710f3515b4nk01ampdcqt0bi19hq0n.apps.googleusercontent.com',
+		'clientsecret' => 'SkJr4zxRWUoQsFKHqT5OBcRQ',
+		'invite' => array(
+			'callback' => 'https://localhost/invite/google',
+			'maxresults' => 1000,
+			'successredirect' => '/connections/invite/?type=google'
+		),
+		'auth' => array(
+
+		)
+	),
+	'yahoo' => array(
+		'consumerkey' => 'dj0yJmk9RlBkNW1qbE5WSlZFJmQ9WVdrOVRHRnhlR0pGTm1zbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD05Zg--',
+		'consumersecret' => '5c4ed4b76674ad16f6ff92bcb3e8fa57e675ff2b',
+		'invite' => array(
+			'callback' => 'https://localhost/invite/yahoo',
+			'maxresults' => 1000,
+			'successredirect' => '/connections/invite/?type=yahoo'
+		),
+		'auth' => array(
+
+		)
+	),
+    'facebook' => array(
+        'app_id' => '378896135940009',
+        'app_secret' => 'dea1eed63081682e16f6f2cd4db023ef',
+        'invite' => array(
+            'callback' => 'https://localhost/invite/facebook',
+            'maxresults' => 1000,
+            'successredirect' => '/connections/invite/?type=facebook',
+            'errorrredirect' => '/connections/invite/?type=facebook'
+        ),
+        'auth' => array(
+            'callback' => 'https://mekooshar.ukietech.net/socials/facebook',
+            'successredirect' => '/registration/'
+        )
+    ),
+	'linkedin' => array(
+		'api_key' => '77d4qxo9d1opsr',
+		'api_secret' => 'NBI0Aanle4Xv0cN1',
+		'invite' => array(
+			'callback' => 'https://localhost/connections/invite/',
+			'maxresults' => 1000,
+			'successredirect' => 'https://localhost/connections/invite/'
+		),
+		'auth' => array(
+			'callback' => 'http://mekooshar.ukietech.net/socials/linkedin',
+			'successredirect' => '/registration/'
+		)
+	)
+);
